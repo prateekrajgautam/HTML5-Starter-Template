@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comic+Neue:ital,wght@0,700;1,400&family=Cutive+Mono&family=Dancing+Script&family=Exo&family=Roboto:wght@100&display=swap");
+
+/* COLORS */
+* {
+    --hue: 235;
+    --hueAscent: 180;
+    --hueComp: 340;
+    --huetext: 170;
+    --light: 95%;
+    --colorLight: hsl(var(--hue), 100%, var(--light));
+    --colorPrimary: hsl(var(--hue), 40%, 42%);
+    --colorSecondary: hsl(var(--hue), 38%, 15%);
+    --colorAscent: hsl(var(--hueAscent), 100%, 50%);
+    --colorShadow: hsl(var(--hue), 38%, 15%);
+    --colorGlow: hsla(0, 0%, 100%, 0.9);
+
+    /* Text */
+    --color-text-light: hsl(var(--huetext), 100%, var(--light));
+    --color-text-dark: hsl(var(--huetext), 3%, 12%);
+    /* Links */
+    --color-link-ascent: hsl(var(--hueAscent), 100%, 50%);
+    --color-link: hsl(202, 97%, 65%);
+
+    /* background */
+    --colorBg: hsl(var(--hue), 38%, 15%);
+    --colorBgPrimary: hsl(var(--hue), 40%, 42%);
+    --colorBgSecrodary: hsl(var(--hueComp), 83%, 55%);
+    --appBackground: linear-gradient(-30deg, var(--colorBgPrimary) 70%, var(--colorBgSecrodary) 200%) no-repeat scroll 0;
+
+}
+
+
+* {
+    --font-body: "Exo", "Verdana", "Roboto";
+    --font-emph: "Cutive Mono";
+    --font-h1: "Bebas Neue", "Arial";
+    --font-h2: "Cutive Mono", "Play", "Arial";
+    --font-h3: "Bebas Neue", "Verdana", "Arial";
+    --font-h4: "Comic Neue", "Arial";
+    --font-h5: "Dancing Script", "Verdana", "Arial";
+    --font-h6: "Dancing Script", "Verdana", "Arial";
+}
