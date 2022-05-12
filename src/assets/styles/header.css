@@ -4,9 +4,12 @@ header {
     z-index: 2;
 }
 
+.logo {
+    flex: 1;
+}
+
 .logo>img {
-    max-width: 3.5em;
-    margin-inline: 1em;
+    max-height: 3.5em;
 }
 
 
@@ -16,7 +19,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #04061b;
-
+    padding-inline: 1em;
 }
 
 
@@ -137,6 +140,12 @@ header {
 
 /* Tabled Menu */
 
+@media all and (max-width:756px) {
+    .items {
+        padding-block: 2em;
+    }
+}
+
 @media all and (min-width:468px) {
 
     .menu {
@@ -144,12 +153,10 @@ header {
     }
 
     .logo {
-        flex: 1
+        order: 0;
     }
 
-    .items {
-        padding-block: 2em;
-    }
+
 
     .items:hover {
         background-color: var(--colorAscent);
@@ -180,7 +187,6 @@ header {
 
     .logo {
         order: 0;
-        flex: 1
     }
 
     .navbutton {
@@ -202,16 +208,5 @@ header {
         display: none;
     }
 
-    .navbutton:not(.secondary) {
-        border-radius: 50em;
-        border: 1px solid aqua;
-        background: var(--colorAscent);
-        color: var(--color-text-dark);
-    }
 
-    .secondary {
-        border-radius: 50em;
-        border: 1px solid aqua;
-        background: none;
-    }
 }
