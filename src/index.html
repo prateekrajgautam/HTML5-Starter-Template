@@ -15,16 +15,19 @@
 
             <nav class="nav">
                 <ul class="menu">
-                    <li class="logo"><img src="/assets/images/logo.png" alt="" class="applogo logo sitelogo">
+                    <li class="nav-logo">
+                        <a class="logo" href="/"><img src="/assets/images/logo.png" alt=""
+                                class="applogo logo sitelogo"></a>
                     </li>
-                    <li class="items">home</li>
-                    <li class="items">Products</li>
-                    <li class="items">user</li>
-                    <li class="items">Blog</li>
-                    <li class="items">Contact</li>
-                    <li class="navbutton ">login</li>
-                    <li class="navbutton secondary">Sign Up</li>
-                    <li class="toggle"><span class="bars"></span></li>
+                    <li class="nav-items"><a href="/">home</a></li>
+                    <li class="nav-items"><a href="/Products">Products</a></li>
+                    <li class="nav-items"><a href="/Blog">Blog</a></li>
+                    <li class="nav-items"><a href="/Contact">Contact</a></li>
+                    <li class="nav-items nav-login ">
+                        <button class="button" onclick="login">Login</button>
+                        <button class="button-blank" onclick="signup">Sign Up</button>
+                    </li>
+                    <li class=" toggle"><span class="bars"></span></li>
                 </ul>
 
             </nav>

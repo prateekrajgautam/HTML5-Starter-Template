@@ -1,6 +1,7 @@
 // To toggle menu on click
 window.addEventListener("load", () => {
     var toggle = document.getElementsByClassName('toggle')[0]
+    // toggle.classList.add("active")
     toggle.addEventListener("click", toggleItems)
     var codeblocks = document.getElementsByClassName('code')
     for (i = 0; i < codeblocks.length; i++) {
@@ -18,12 +19,12 @@ window.addEventListener("load", () => {
 })
 
 function toggleItems() {
-    var items = document.getElementsByClassName("items")
+    var items = document.getElementsByClassName("nav-items")
     for (i = 0; i < items.length; i++) {
         var toggle = document.getElementsByClassName('toggle')[0]
         toggle.classList.toggle('active')
         items[i].classList.toggle('active')
-        items[i].addEventListener("click", toggleItems)
+        // items[i].addEventListener("click", toggleItems)
     }
 }
 

@@ -54,6 +54,7 @@ body {
 
 a {
     color: var(--color-link);
+    cursor: pointer;
 }
 
 /* TABLE */
@@ -129,7 +130,10 @@ svg {
 
 button {
     border: 0px;
+    cursor: pointer;
 }
+
+
 
 .button {
     position: relative;
@@ -142,12 +146,12 @@ button {
     color: #0b4c65;
     text-align: center;
     text-shadow: none;
-    margin: 2em;
-    margin-left: 0;
     text-transform: capitalize;
     border-radius: .01em;
     box-shadow: 2px 2px 5px #000000;
     cursor: pointer;
+    margin-inline: 1em;
+    margin-block: 1em;
 }
 
 button:hover,
@@ -167,8 +171,6 @@ button:hover,
     color: #05eeff;
     text-align: center;
     text-shadow: none;
-    margin: 2em;
-    margin-left: 0;
     text-transform: capitalize;
     border-radius: .01em;
 }
@@ -195,4 +197,46 @@ input,
     margin: 2px;
     width: 100%;
     background: #BBC;
+}
+
+
+
+/* CODE BLOCK */
+
+pre,
+code,
+.code {
+    min-height: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1em;
+    margin: 2em;
+    border-radius: .5em;
+    resize: both;
+    max-width: 70em;
+    font-family: var(--font-code);
+    font-size: 1rem;
+}
+
+pre:hover:after,
+code:hover:after,
+.code:hover:after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    content: 'click to copy';
+    font-size: smaller;
+    font-weight: 100;
+    background-color: rgba(165, 165, 165, 0.2);
+    border-radius: 5px;
+    z-index: 0;
 }
