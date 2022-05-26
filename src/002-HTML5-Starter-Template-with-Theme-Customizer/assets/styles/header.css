@@ -1,0 +1,190 @@
+@import url("/assets/styles/ham.css");
+
+
+
+header {
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+}
+
+.nav-logo {
+    flex: 1;
+}
+
+.logo>img {
+    max-height: 3.5em;
+}
+
+.menu,
+nav>ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-nav-bg);
+    padding-inline: 1em;
+}
+
+
+.nav-item,
+.nav-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 1em;
+    order: 1;
+    padding: 1em;
+}
+
+.toggle:hover {
+    cursor: pointer;
+}
+
+.toggle.nav-login {
+    order: 2;
+}
+
+
+.nav-items {
+    text-transform: capitalize;
+    width: 100%;
+    text-align: center;
+    order: 3;
+    /* display: none; */
+}
+
+.nav-items>a {
+    width: 100%;
+}
+
+/* SHOW MENU ON CLICK WITH JS */
+.nav-items.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-items>a {
+    color: var(--color-text-light);
+}
+
+.nav-items>a:hover {
+    color: var(--color-text-dark);
+    background: var(--colorAscent);
+}
+
+
+
+
+
+
+@media all and (max-width:756px) {
+    .nav-items>a {
+        padding-block: 2em;
+    }
+}
+
+
+
+
+/* MOBILE */
+
+@media all and (max-width:468px) {
+
+    .nav-items,
+    .nav-login {
+        display: none;
+    }
+
+}
+
+/* Tabled Menu */
+
+
+
+@media all and (min-width:468px) {
+
+    .menu {
+        justify-content: space-between;
+    }
+
+    .logo {
+        order: 0;
+    }
+
+    .nav-items,
+    .nav-login {
+        display: none;
+    }
+
+    .nav-item {
+        min-height: 3em;
+        padding: 2em;
+    }
+
+    .nav-items>a {
+        padding: .5em;
+        width: 100%;
+    }
+
+    /* .nav-items>a:hover {
+        background-color: var(--colorAscent);
+        color: var(--color-text-dark);
+    } */
+
+    .nav-login {
+        width: auto;
+        order: 1;
+        display: flex;
+        /* padding-inline: 1em; */
+    }
+
+    .toggle {
+        order: 2;
+    }
+
+
+}
+
+/* Desktop Menu */
+
+@media all and (min-width:768px) {
+
+    .menu {
+        justify-content: space-between;
+    }
+
+    .logo {
+        order: 0;
+    }
+
+    .nav-items,
+    .nav-login {
+        display: flex;
+    }
+
+    .nav-login {
+        width: auto;
+        order: 2;
+        /* padding-inline: 1em; */
+    }
+
+    .nav-items {
+        width: auto;
+        order: 1;
+        padding-inline: 2em;
+    }
+
+    .toggle {
+        order: 2;
+        display: none;
+    }
+
+
+}

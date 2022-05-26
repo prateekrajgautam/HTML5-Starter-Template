@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comic+Neue:ital,wght@0,700;1,400&family=Cutive+Mono&family=Dancing+Script&family=Exo:wght@100&family=Hind:wght@300&family=Poppins:wght@200&family=Roboto:wght@100&family=Source+Sans+Pro:wght@200&display=swap');
+
+/* COLORS */
+:root {
+    /* --hue: 235; */
+    testcolor: hsl(0, 100%, 57%);
+    --hue: 0;
+    --hueAscent: 40;
+    /* --hueComp: 340; */
+    --hueComp: 30;
+    --huetext: 170;
+    --huetextlight: calc(var(--hue)*2);
+    --huetextdark: var(--hue);
+    --light: 95%;
+    --colorLight: hsl(var(--hue), 100%, var(--light));
+    --colorPrimary: hsl(var(--hue), 40%, var(--light));
+    --colorSecondary: hsl(var(--hue), 38%, 15%);
+    --colorAscent: hsl(var(--hueAscent), 100%, 57%);
+    --colorShadow: hsl(var(--hue), 38%, 15%);
+    --colorGlow: hsla(0, 0%, 100%, 0.9);
+
+    /* Text */
+    --color-text-lighter: hsl(var(--huetextlight), 100%, var(--light));
+    --color-text-light: hsl(var(--huetextlight), 100%, var(--light));
+    --color-text-dark: hsl(var(--huetextdark), 3%, 15%);
+    --color-text-darker: hsl(var(--huetextdark), 10%, 5%);
+    /* Links */
+    --color-link-ascent: hsl(var(--hueAscent), 100%, 50%);
+    --color-link: hsl(var(--hueAscent), 97%, 65%);
+
+    /* background */
+    --colorBg: hsl(var(--hue), 30%, 35%);
+    --colorBgPrimary: hsl(var(--hue), 50%, 50%);
+    --colorBgSecrodary: hsl(var(--hueComp), 83%, 55%);
+    --appBackground: linear-gradient(-30deg, var(--colorBgPrimary) 70%, var(--colorBgSecrodary) 200%) no-repeat scroll 0;
+    --sectionGradientOverlay: linear-gradient(120deg,
+            hsla(var(--hue), 50%, 0%, .1) 30%,
+            hsla(var(--hueComp), 20%, 0%, .51) 150%) no-repeat scroll 0;
+
+    /* header navbar */
+    --color-nav-bg: hsla(var(--hue), 30%, 10%, 1);
+}
+
+
+* {
+    --font-body: 'Poppins', sans-serif, "Exo", "Verdana", "Roboto";
+    --font-emph: "Cutive Mono";
+    --font-h1: "Bebas Neue", "Arial";
+    --font-h2: 'Poppins', sans-serif, "Cutive Mono", "Play", "Arial";
+    --font-h3: 'Poppins', sans-serif, "Bebas Neue", "Verdana", "Arial";
+    --font-h4: 'Poppins', sans-serif, "Comic Neue", "Arial";
+    --font-h5: 'Poppins', sans-serif, "Dancing Script", "Verdana", "Arial";
+    --font-h6: "Dancing Script", "Verdana", "Arial";
+    --font-code: "Cutive Mono", "Arial", "Consolas", "Monaco", "Liberation Mono", "Lucida Console", "monospace";
+    --font-copyrights: "Exo", "Verdana";
+    --body-font-size: 16;
+}
+
+::selection {
+    /* color: hsl(var(--hueAscent), 100%, 80%); */
+    background-color: hsl(var(--hueComp), 80%, 60%);
+}
