@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Template Tester</title>
-    <link rel="stylesheet" href="/assets/styles/sitestyle.css">
+    <link rel="stylesheet" href="./assets/styles/sitestyle.css">
 </head>
 
 <body>
@@ -26,15 +26,8 @@
                     <p>Ascent color shade:<span id="bg3disp"></span>
                         <input id="bg3" type="range" min="1" max="360" step=".1" value="0" class="slider">
                     </p>
-                    <p>Text color light:<span id="text-color-light-disp"></span>
-                        <input id="text-color-light" type="range" min="1" max="360" step=".1" value="0" class="slider">
-                    </p>
 
-                    <p>Text color dark: <span id="text-color-dark-disp"> </span>
-
-                        <input id="text-color-dark" type="range" min="1" max="360" step=".1" value="0" class="slider">
-                    </p>
-                    <p><span>font size <size:span id="text-font-size-disp"></size:span>
+                    <p><span>Font size <size:span id="text-font-size-disp"></size:span>
                             <input id="text-font-size" type="range" min=".1" max="5.0" value="0" step=".1"
                                 class="slider"></span>
                         <span>Font select
@@ -51,6 +44,17 @@
                                 <option value="Verdana">Verdana</option>
                                 </option>
                             </select>
+                        </span>
+
+                        <span>Text shade light:<span id="text-color-light-disp"></span>
+                            <input id="text-color-light" type="range" min="1" max="360" step=".1" value="0"
+                                class="slider">
+                        </span>
+
+                        <span>Text shade dark: <span id="text-color-dark-disp"> </span>
+
+                            <input id="text-color-dark" type="range" min="1" max="360" step=".1" value="0"
+                                class="slider">
                         </span>
                     </p>
                     <button onclick="closecustomizer()" class="button">
@@ -247,8 +251,8 @@
     </div>
 
 </body>
-<script src="/assets/js/sitescript.js"></script>
-<script src="/assets/js/colorconfig.js"></script>
+<script src="./assets/js/sitescript.js"></script>
+<script src="./assets/js/colorconfig.js"></script>
 <script type="text/javascript" src="https://generatorjs.mgeek.in/cdn/generator.js" async defer> </script>
 <!-- <script src="/assets/js/htmx.min.js.gz"></script> -->
 

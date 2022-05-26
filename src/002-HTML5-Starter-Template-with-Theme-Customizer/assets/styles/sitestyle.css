@@ -1,9 +1,12 @@
 /* Font Variables */
-@import url("/assets/styles/header.css");
-@import url("/assets/styles/app.css");
-@import url("/assets/styles/tags.css");
-@import url("/assets/styles/colorandfonts.css");
-@import url("/assets/styles/customizer.css");
+@import url("./colorandfonts.css");
+@import url("./app.css");
+@import url("./header.css");
+@import url("./tags.css");
+@import url("./app.css");
+@import url("./customizer.css");
+
+
 
 /* 
 

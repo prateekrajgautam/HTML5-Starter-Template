@@ -55,5 +55,10 @@ function changeBodyFont() {
     var fontselecteled = document.getElementById("FontSelect").value
     console.log(fontselecteled)
     document.body.style.fontFamily = fontselecteled
-    h1.style.fontFamily = fontselecteled
+    var all_headings = document.querySelectorAll("h1,h2,h3,h4,h5,h6")
+    for (i = 0; i < all_headings.length; i++) {
+        cssVar("--font-h2", `"${fontselecteled}";`)
+        all_headings[i].style.fontFamily = fontselecteled
+    }
+    console.log(all_headings)
 }

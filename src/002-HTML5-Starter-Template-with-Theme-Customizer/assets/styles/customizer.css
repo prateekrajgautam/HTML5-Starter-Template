@@ -1,6 +1,7 @@
 #Customizer {
     background-color: hsl(120, 10%, 10%);
     color: hsl(120, 10%, 95%);
+    scroll-behavior: auto;
 }
 
 #themeselectionfloat {
