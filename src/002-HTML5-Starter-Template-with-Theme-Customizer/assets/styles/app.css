@@ -28,7 +28,7 @@
 #maincontent {
     display: inline-grid;
     grid-column: auto;
-    grid
+    max-width: 100%;
 }
 
 #appmain {

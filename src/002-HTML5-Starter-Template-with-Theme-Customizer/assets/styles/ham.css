@@ -1,9 +1,14 @@
-
 /* HAM MENU */
+/* .bars {
+    background-color: red;
+    height: 3px;
+    width: 3px;
+    z-index: 4;
+} */
 .toggle:not(.active)>.bars {
     position: relative;
     display: inline-block;
-    background: var(--color-text-light);
+    background-color: var(--color-text-light);
     height: .15em;
     width: 1em;
     border-radius: 1px;
@@ -13,7 +18,7 @@
 .toggle:not(.active)>.bars::before {
     position: absolute;
     display: inline-block;
-    background: var(--color-text-light);
+    background-color: var(--color-text-light);
     height: .15em;
     width: 1em;
     border-radius: 1px;
@@ -24,7 +29,7 @@
 .toggle:not(.active)>.bars::after {
     position: absolute;
     display: inline-block;
-    background: var(--color-text-light);
+    background-color: var(--color-text-light);
     height: .15em;
     width: 1em;
     border-radius: 1px;
@@ -35,7 +40,7 @@
 .toggle.active>.bars {
     position: relative;
     display: inline-block;
-    background: var(--colorBgSecrodary);
+    background-color: var(--colorBgSecrodary);
     height: .17em;
     width: 1.2em;
     border-radius: 1px;
@@ -46,7 +51,7 @@
 .toggle.active>.bars::before {
     position: absolute;
     display: inline-block;
-    background: var(--colorBgSecrodary);
+    background-color: var(--colorBgSecrodary);
     height: .17em;
     width: 1.2em;
     border-radius: 1px;

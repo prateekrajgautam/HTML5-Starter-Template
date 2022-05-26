@@ -9,10 +9,11 @@
 
 #themeselectionfloat {
     display: inline-grid;
+    max-width: 100%;
     background-color: hsl(120, 10%, 10%);
     color: hsl(var(--hueTextLight), 10%, 95%);
-    /* grid-template-columns: 10px 1fr 1fr 1fr 10px; */
-    padding: 10%;
+    grid-template-columns: 5px 1fr 5px;
+    padding: 5px;
     /* scroll-behavior: auto; */
     position: -webkit-sticky;
     position: sticky;
@@ -22,14 +23,14 @@
 
 .slidecontainer {
     display: inline-grid;
-    grid-column: 1/5;
+    /* grid-column: 1/5; */
 }
 
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     /* Override default look */
     appearance: none;
-    width: 25px;
+    /* mawidth: 25px; */
     /* Set a specific slider handle width */
     height: 25px;
     /* Slider handle height */
