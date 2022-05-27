@@ -7,6 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Template Tester</title>
     <link rel="stylesheet" href="./assets/styles/sitestyle.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .material-symbols-rounded {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 48
+        }
+    </style>
 </head>
 
 <body>
@@ -14,8 +27,9 @@
 
     <div id="app">
         <div id="Customizer">
+
+            <h2>Customizer</h2>
             <div id="themeselectionfloat">
-                <h2>Customizer</h2>
                 <div class="slidecontainer">
                     <p>Main color <span id="bg1disp"></span>
                         <input id="bg1" type="range" min="1" max="360" step=".1" value="0" class="slider">
@@ -73,7 +87,7 @@
                 <nav class="nav">
                     <ul class="menu">
                         <li class="nav-logo">
-                            <a class="logo" href="/"><img src="./assets/images/logo.png" alt=""
+                            <a class="logo" href="./"><img src="./assets/images/logo.png" alt=""
                                     class="applogo logo sitelogo"></a>
                         </li>
                         <li class="nav-items"><a href="/">home</a></li>
@@ -85,6 +99,9 @@
                             <button class="button-blank" onclick="signup">Sign Up</button>
                         </li>
                         <li class=" toggle"><span class="bars"></span></li>
+                        <li id="showCustomizer" class="nav-items showCustomizer" onclick="showCustomizer()"><span
+                                class="material-symbols-rounded">tune
+                            </span></li>
                     </ul>
 
                 </nav>
@@ -244,10 +261,16 @@
                 footer
 
             </footer>
-            <div id="copyright"><span id="copyurl">Designed with <a href="https://generatorjs.mgeek.in">GeneratorJs</a>
-                    &copy;
-                    2022 <a href="http://mgeek.in">mGeek.in</a></span><span id="copyauthor">Designed by <a
-                        href="http://mgeek.in/webmaster">Dr. Prateek Raj Gautam</a></span></div>
+            <div id="copyright">
+                <span id="copyurl">Designed with
+                    <a href="https://generatorjs.mgeek.in">GeneratorJs</a>
+                    &copy; 2022
+                    <a href="http://mgeek.in">mGeek.in</a>
+                </span>
+                <span id="copyauthor">Designed by
+                    <a href="http://mgeek.in/webmaster">Dr. Prateek Raj Gautam</a>
+                </span>
+            </div>
 
         </div>
 
@@ -257,6 +280,23 @@
 <script src="./assets/js/sitescript.js"></script>
 <script src="./assets/js/colorconfig.js"></script>
 <script type="text/javascript" src="https://generatorjs.mgeek.in/cdn/generator.js" async defer> </script>
+<script>
+    function getHTML(name) {
+        if (localStorage.getItem(name) != null) return localStorage.getItem(name)
+        let xhr = new XMLHttpRequest();
+        URL = `./${name}.html`
+        method = "GET"
+        xhr.open(method, URL)
+        xhr.send()
+        xhr.onload = function () {
+            alert(`Loaded: ${xhr.status} ${xhr.response}`);
+            localStorage.setItem(name, xhr.response)
+
+            xhr.close()
+        };
+    }
+    getHTML('footer')
+</script>
 <!-- <script src="/assets/js/htmx.min.js.gz"></script> -->
 
 
