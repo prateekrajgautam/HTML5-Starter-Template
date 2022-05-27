@@ -1,0 +1,8 @@
+#footerieeelinks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.ieee-links {
+    display: inline-grid;
+}

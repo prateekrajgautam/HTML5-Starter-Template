@@ -3,21 +3,26 @@
     <nav class="nav">
         <ul class="menu">
             <li class="nav-logo">
-                <a class="logo" href="./"><img src="./assets/images/logo.png" alt="" class="applogo logo sitelogo"></a>
+
+                <!-- <a href="./"><img class="logo" src="./assets/images/logo.png" alt="<h1>IEEE</h1>" 
+                class="applogo logo sitelogo">-->
+                <h3 class="logo">MAC2023</h3>
+                </a>
             </li>
             <li class="nav-items"><a href="./">home</a></li>
             <li class="nav-items"><a onclick="getHTML('pages/tracks','appmain')">Tracks</a>
             </li>
             <li class="nav-items"><a href="./updates">Updates</a></li>
             <li class="nav-items"><a href="./Contact">Contact</a></li>
-            <li class="nav-items nav-login ">
+            <!-- <li class="nav-items nav-login ">
                 <button class="button" onclick="login">Login</button>
                 <button class="button-blank" onclick="signup">Sign Up</button>
+            </li> -->
+            <li class="toggle"><span class="bars"></span></li>
+            <li id="showCustomizer" class="nav-items showCustomizer" onclick="showCustomizer()">
+                <span class="material-symbols-rounded">tune
+                </span>
             </li>
-            <li class=" toggle"><span class="bars"></span></li>
-            <li id="showCustomizer" class="nav-items showCustomizer" onclick="showCustomizer()"><span
-                    class="material-symbols-rounded">tune
-                </span></li>
         </ul>
 
     </nav>

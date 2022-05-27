@@ -3,7 +3,7 @@ setTimeout(() => {
     // alert("hi")
 
     function cssVar(name, value) {
-        console.log(value)
+        // console.log(value)
         if (name[0] != '-') name = '--' + name //allow passing with or without --
         if (value) document.documentElement.style.setProperty(name, value)
         return getComputedStyle(document.documentElement).getPropertyValue(name);
@@ -67,17 +67,20 @@ setTimeout(() => {
         }
     }
 
-    function closecustomizer() {
-        document.getElementById("Customizer").style.display = "none";
-        document.getElementById("app").style.gridTemplateColumns = '1fr'
-        // document.getElementById("showCustomizer").onclick = "showCustomizer"
 
-    }
-
-    function showCustomizer() {
-        document.getElementById("Customizer").style.display = "inline-grid";
-        document.getElementById("app").style.gridTemplateColumns = '1fr 3fr'
-        // document.getElementById("showCustomizer").onclick = "closecustomizer()"
-
-    }
 }, 200)
+
+function closecustomizer() {
+    document.getElementById("Customizer").style.display = "none";
+    document.getElementById("app").style.gridTemplateColumns = '1fr'
+    // document.getElementById("showCustomizer").onclick = "showCustomizer"
+
+}
+
+function showCustomizer() {
+    document.getElementById("Customizer").style.display = "inline-grid";
+    document.getElementById("app").style.gridTemplateColumns = '1fr 3fr'
+    // document.getElementById("showCustomizer").onclick = "closecustomizer()"
+
+}
+closecustomizer()
