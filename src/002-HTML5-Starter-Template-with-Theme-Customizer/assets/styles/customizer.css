@@ -1,7 +1,9 @@
 #Customizer {
-    position: relative;
+
+    /* position: relative; */
     display: grid;
     grid-template-rows: minmax(60px, 4em) 80vh 1fr;
+
     background-color: hsl(120, 10%, 10%);
     color: hsl(120, 10%, 95%);
     /* scroll-behavior: auto; */
@@ -12,19 +14,23 @@
     max-width: 100%;
     background-color: hsl(120, 10%, 10%);
     color: hsl(var(--hueTextLight), 10%, 95%);
+    grid-template-columns: 1fr 10fr 1fr;
     /* grid-template-columns: 10px 5fr 10px; */
     /* grid-template-rows: 2em 1fr 5fr; */
     padding: 5px;
     /* scroll-behavior: auto; */
-    position: -webkit-sticky;
+    /* position: -webkit-sticky;
     position: sticky;
     top: 0px;
-    bottom: 0px;
+    bottom: 0px; */
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
 }
 
 .slidecontainer {
     display: inline-grid;
-    /* grid-column: 1/5; */
+    grid-column: 2;
 }
 
 .slider::-webkit-slider-thumb {
@@ -41,9 +47,6 @@
     /* Cursor on hover */
 }
 
-.slidecontainer {
-    position: relative;
-}
 
 .showCustomizer {
     cursor: pointer;

@@ -23,280 +23,84 @@
 </head>
 
 <body>
-
-
     <div id="app">
-        <div id="Customizer">
-
-            <h2>Customizer</h2>
-            <div id="themeselectionfloat">
-                <div class="slidecontainer">
-                    <p>Main color <span id="bg1disp"></span>
-                        <input id="bg1" type="range" min="1" max="360" step=".1" value="0" class="slider">
-                    </p>
-                    <p>Secondary color shade:<span id="bg2disp"></span>
-                        <input id="bg2" type="range" min="1" max="360" step=".1" value="0" class="slider">
-                    </p>
-                    <p>Ascent color shade:<span id="bg3disp"></span>
-                        <input id="bg3" type="range" min="1" max="360" step=".1" value="0" class="slider">
-                    </p>
-
-                    <p><span>Font size <size:span id="text-font-size-disp"></size:span>
-                            <input id="text-font-size" type="range" min=".1" max="2" value="0" step=".1"
-                                class="slider"></span>
-                        <span>Font select
-                            <select id="FontSelect" onchange="changeBodyFont()">
-                                <option value="Poppins" selected="selected">Poppins</option>
-                                <option value="Play">Play</option>
-                                <option value="Exo">Exo</option>
-                                <option value="Cutive Mono">Cutive Mono</option>
-                                <option value="Consolas">Consolas</option>
-                                <option value="Monaco">Monaco</option>
-                                <option value="helvetica">helvetica</option>
-                                <option value="Robot">Robot</option>
-                                <option value="Verdana">Verdana</option>
-                                <option value="Bebas Neue">Bebas Neue</option>
-                                <option value="Dancing Script">Dancing Script</option>
-                                <option value="Arial">Arial</option>
-                                <option value="Times New Roman">Times New Roman</option>
-                                </option>
-                            </select>
-                        </span>
-
-                        <span>Text shade light:<span id="text-color-light-disp"></span>
-                            <input id="text-color-light" type="range" min="1" max="360" step=".1" value="0"
-                                class="slider">
-                        </span>
-
-                        <span>Text shade dark: <span id="text-color-dark-disp"> </span>
-
-                            <input id="text-color-dark" type="range" min="1" max="360" step=".1" value="0"
-                                class="slider">
-                        </span>
-                    </p>
-                    <button onclick="closecustomizer()" class="button">
-                        Close Customizer
-                    </button>
-                </div>
-
-            </div>
-        </div>
+        <div id="slidebar"></div>
         <div id="maincontent">
-            <header id="appheader" class="appheader">
-
-                <nav class="nav">
-                    <ul class="menu">
-                        <li class="nav-logo">
-                            <a class="logo" href="./"><img src="./assets/images/logo.png" alt=""
-                                    class="applogo logo sitelogo"></a>
-                        </li>
-                        <li class="nav-items"><a href="/">home</a></li>
-                        <li class="nav-items"><a href="/tracks">Tracks</a></li>
-                        <li class="nav-items"><a href="/updates">Updates</a></li>
-                        <li class="nav-items"><a href="/Contact">Contact</a></li>
-                        <li class="nav-items nav-login ">
-                            <button class="button" onclick="login">Login</button>
-                            <button class="button-blank" onclick="signup">Sign Up</button>
-                        </li>
-                        <li class=" toggle"><span class="bars"></span></li>
-                        <li id="showCustomizer" class="nav-items showCustomizer" onclick="showCustomizer()"><span
-                                class="material-symbols-rounded">tune
-                            </span></li>
-                    </ul>
-
-                </nav>
-
-                <!-- <input type="checkbox" id="navment"> -->
-            </header>
-            <div id="appmain">
-                <section class="section container">
-                    <h1>h1 heading</h1>
-                    <h2>h2 heading</h2>
-                    <h3>h3 heading</h3>
-                    <h4>h4 heading</h4>
-                    <h5>h5 heading</h5>
-                    <h6>h6 heading</h6>
-                    <p>p tag paragraph
-                    </p>
-                    <span>
-                        span element
-                    </span>
-                    <br>
-                    <a href="#">a tag</a>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, accusantium mollitia magni
-                        aliquid animi praesentium dolore enim velit ullam quos ea odio maxime corporis consequatur
-                        recusandae similique quia quisquam blanditiis?</p>
-                    <table>
-                        <caption>
-                            caption
-                        </caption>
-                        <thead>
-                            <tr>
-                                <td>S.No</td>
-                                <td>Name</td>
-                                <td>type</td>
-                                <td>description</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>S.No</td>
-                                <td>Name</td>
-                                <td>type</td>
-                                <td>description</td>
-                            </tr>
-                            <tr>
-                                <td>S.No</td>
-                                <td>Name</td>
-                                <td>type</td>
-                                <td>description</td>
-                            </tr>
-                            <tr>
-                                <td>S.No</td>
-                                <td>Name</td>
-                                <td>type</td>
-                                <td>description</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <button class="button">button</button>
-                    <button class="button-blank">button-blank</button>
-                </section>
-
-                <section class="container">
-                    <h1>heading</h1>
-                    text
-                    <p>
-                        para
-                    </p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, accusantium mollitia magni
-                        aliquid animi praesentium dolore enim velit ullam quos ea odio maxime corporis consequatur
-                        recusandae similique quia quisquam blanditiis?</p>
-                    <code>
-            this is some code
-        </code>
-                </section>
-                <section class="container section-light">
-                    <h1>section-light</h1>
-                    text
-                    <p>
-                        para
-                    </p>
-                    <code>
-            this is some code
-        </code>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, accusantium mollitia magni
-                        aliquid animi praesentium dolore enim velit ullam quos ea odio maxime corporis consequatur
-                        recusandae similique quia quisquam blanditiis?</p>
-                </section>
-
-
-                <section class="container section-small section-lighter">
-                    <h1>section-lighter</h1>
-                    text
-                    <p>
-                        para
-                    </p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, accusantium mollitia magni
-                        aliquid animi praesentium dolore enim velit ullam quos ea odio maxime corporis consequatur
-                        recusandae similique quia quisquam blanditiis?</p>
-                    <code>
-                    this is some code
-                </code>
-                </section>
-
-                <section class="container section-small section-lighter section-overlay">
-                    <h1>section-lighter section-overlay</h1>
-                    text
-                    <p>
-                        para
-                    </p>
-                    <code>
-                    this is some code
-                </code>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, accusantium mollitia magni
-                        aliquid animi praesentium dolore enim velit ullam quos ea odio maxime corporis consequatur
-                        recusandae similique quia quisquam blanditiis?</p>
-                </section>
-
-
-                <section class="container section-small section-dark">
-                    <h1>section-dark</h1>
-                    text
-                    <p>
-                        para
-                    </p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, accusantium mollitia magni
-                        aliquid animi praesentium dolore enim velit ullam quos ea odio maxime corporis consequatur
-                        recusandae similique quia quisquam blanditiis?</p>
-                    <code>
-                this is some code
-            </code>
-                </section>
-                </section>
-                <section class="container section-small section-darker">
-                    <h1>darker</h1>
-                    text
-                    <p>
-                        para
-                    </p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, accusantium mollitia magni
-                        aliquid animi praesentium dolore enim velit ullam quos ea odio maxime corporis consequatur
-                        recusandae similique quia quisquam blanditiis?</p>
-                    <code>
-                this is some code
-            </code>
-                </section>
-
-
-
-
-
-
-
-
-            </div>
-            <footer id="appfooter" class="footer container">
-                footer
-
-            </footer>
-            <div id="copyright">
-                <span id="copyurl">Designed with
-                    <a href="https://generatorjs.mgeek.in">GeneratorJs</a>
-                    &copy; 2022
-                    <a href="http://mgeek.in">mGeek.in</a>
-                </span>
-                <span id="copyauthor">Designed by
-                    <a href="http://mgeek.in/webmaster">Dr. Prateek Raj Gautam</a>
-                </span>
-            </div>
-
+            <div id="header"></div>
+            <div id="content"></div>
+            <div id="footer"></div>
         </div>
 
     </div>
 
-</body>
-<script src="./assets/js/sitescript.js"></script>
-<script src="./assets/js/colorconfig.js"></script>
-<script type="text/javascript" src="https://generatorjs.mgeek.in/cdn/generator.js" async defer> </script>
-<script>
-    function getHTML(name) {
-        if (localStorage.getItem(name) != null) return localStorage.getItem(name)
-        let xhr = new XMLHttpRequest();
-        URL = `./${name}.html`
-        method = "GET"
-        xhr.open(method, URL)
-        xhr.send()
-        xhr.onload = function () {
-            alert(`Loaded: ${xhr.status} ${xhr.response}`);
-            localStorage.setItem(name, xhr.response)
+    <script>
+        function resetFunction() {
+            localStorage.clear()
+        }
+        // document.getElementById("slidebar").innerHTML = customizer
+        async function getHTML(name, target = null, type = 'innerHTML') {
+            var response = ""
+            if (localStorage.getItem(name) != null) {
+                response = localStorage.getItem(name)
+                if (target != null) {
+                    // alert(target)
+                    // alert(response)
+                    // alert(type)
+                    if (type == "innerHTML") {
+                        document.getElementById(target).innerHTML = response
+                    }
+                    if (type == "outerHTML") {
+                        document.getElementById(target).outerHTML = response
+                    }
+                    if (type == "append") document.getElementById(target).innerHTML += response
+                }
+            }
+            if (localStorage.getItem(name) == null) {
+                let xhr = new XMLHttpRequest();
+                URL = `./${name}.html`
+                method = "GET"
+                xhr.open(method, URL)
+                await xhr.send()
+                xhr.onload = async function () {
+                    // alert(`${xhr.onerror}Loaded: ${xhr.status} ${xhr.response} `);
+                    if (xhr.status >= 200) {
+                        response = xhr.response
+                        localStorage.setItem(name, response)
+                        await xhr.DONE
+                        if (target != null) {
+                            // alert(target)
+                            // alert(response)
+                            // alert(type)
+                            if (type == "innerHTML") {
+                                document.getElementById(target).innerHTML = response
+                            }
+                            if (type == "outerHTML") {
+                                document.getElementById(target).outerHTML = response
+                            }
+                            if (type == "append") document.getElementById(target).innerHTML += response
+                        }
+                    }
+                }
 
-            xhr.close()
-        };
-    }
-    getHTML('footer')
-</script>
+            }
+
+
+            return response
+        }
+        // document.getElementById("content").innerHTML = getHTML('appmaindemo')
+        getHTML('includes/customizer', 'slidebar', "outerHTML")
+        getHTML('includes/footer', 'footer', 'outerHTML')
+        getHTML('includes/header', 'header', 'outerHTML')
+        getHTML('appmaindemo', 'content', 'outerHTML')
+
+    </script>
+    <script src="./assets/js/sitescript.js"></script>
+    <script src="./assets/js/colorconfig.js"></script>
+    <script type="text/javascript" src="https://generatorjs.mgeek.in/cdn/generator.js" async defer> </script>
+
+
+</body>
+
 <!-- <script src="/assets/js/htmx.min.js.gz"></script> -->
 
 

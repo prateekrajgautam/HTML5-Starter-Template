@@ -2,7 +2,7 @@
 #app {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 4fr;
 
 
     -webkit-box-orient: vertical;
@@ -74,10 +74,12 @@
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding: 20px;
-    background-color: rgba(65, 70, 139, 0.5);
+    /* rgba(65, 70, 139, 0.5); */
+    background-color: var(--colorCopyrightsBG);
     font-family: var(--font-copyrights);
     font-size: .6rem;
     font-weight: 100;
+    color: white;
 }
 
 #copyright p {

@@ -1,0 +1,54 @@
+<div id="Customizer">
+
+    <h2>Customizer</h2>
+    <div id="themeselectionfloat">
+        <div class="slidecontainer">
+            <p>Main color <span id="bg1disp"></span>
+                <input id="bg1" type="range" min="1" max="360" step=".1" value="0" class="slider">
+            </p>
+            <p>Secondary color shade:<span id="bg2disp"></span>
+                <input id="bg2" type="range" min="1" max="360" step=".1" value="0" class="slider">
+            </p>
+            <p>Ascent color shade:<span id="bg3disp"></span>
+                <input id="bg3" type="range" min="1" max="360" step=".1" value="0" class="slider">
+            </p>
+
+            <p><span>Font size <size:span id="text-font-size-disp"></size:span>
+                    <input id="text-font-size" type="range" min=".1" max="2" value="0" step=".1" class="slider"></span>
+                <span>Font select
+                    <select id="FontSelect" onchange="changeBodyFont()">
+                        <option value="Poppins" selected="selected">Poppins</option>
+                        <option value="Play">Play</option>
+                        <option value="Exo">Exo</option>
+                        <option value="Cutive Mono">Cutive Mono</option>
+                        <option value="Consolas">Consolas</option>
+                        <option value="Monaco">Monaco</option>
+                        <option value="helvetica">helvetica</option>
+                        <option value="Robot">Robot</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Bebas Neue">Bebas Neue</option>
+                        <option value="Dancing Script">Dancing Script</option>
+                        <option value="Arial">Arial</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        </option>
+                    </select>
+                </span>
+                <br />
+                <span>Text shade light:<span id="text-color-light-disp"></span>
+                    <input id="text-color-light" type="range" min="1" max="360" step=".1" value="0" class="slider">
+                </span>
+                <br />
+                <span>Text shade dark: <span id="text-color-dark-disp"> </span>
+                    <input id="text-color-dark" type="range" min="1" max="360" step=".1" value="0" class="slider">
+                </span>
+            </p>
+            <button onclick="closecustomizer()" class="button">
+                Close Customizer
+            </button>
+            <button onclick="resetFunction()" class="button">
+                Reset
+            </button>
+        </div>
+
+    </div>
+</div>

@@ -19,6 +19,8 @@
     --colorShadow: hsl(var(--hue), 38%, 15%);
     --colorGlow: hsla(0, 0%, 100%, 0.9);
 
+    --colorCopyrightsBG:hsl(236, 45%, 24%);
+
     /* Text */
     --color-text-lighter: hsl(var(--huetextlight), 100%, var(--light));
     --color-text-light: hsl(var(--huetextlight), 100%, var(--light));
