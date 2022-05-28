@@ -11,7 +11,7 @@ header {
 .nav-logo {
     flex: 1;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .nav-logo>a {
@@ -39,13 +39,28 @@ header {
 
 
 .nav-logo>a>span {
+
     display: inline-block;
     padding-inline: 5px;
+
+}
+
+.nav-logo>a>span:nth-child(odd) {
+    margin-left: 1.2em
 }
 
 .logo {
     /* padding-top: 5px; */
+    position: fixed;
     display: inline-block;
+    height: 1.5em;
+    width: 1.5em;
+}
+
+.logo:hover {
+    position: fixed;
+    height: 10em;
+    width: 10em;
 }
 
 .menu,
@@ -58,6 +73,11 @@ nav>ul {
     padding-inline: 1em;
 }
 
+li {
+    padding-inline: 0px;
+    margin-inline: 0px;
+    ;
+}
 
 .nav-item,
 .nav-login {

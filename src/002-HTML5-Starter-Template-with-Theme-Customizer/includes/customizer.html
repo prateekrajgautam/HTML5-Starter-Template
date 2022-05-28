@@ -42,13 +42,32 @@
                     <input id="text-color-dark" type="range" min="1" max="360" step=".1" value="0" class="slider">
                 </span>
             </p>
-            <button onclick="closecustomizer()" class="button">
-                Close Customizer
-            </button>
-            <button onclick="resetFunction()" class="button">
-                Reset
-            </button>
+            <div id="themeConfig">
+                <button onclick="resetFunction()" class="button">
+                    Defaults
+                </button>
+                <button onclick="darkMode()" class="button">
+                    Dark
+                </button>
+                <button onclick="saveTheme()" class="button">
+                    Save
+                </button>
+                <button onclick="closecustomizer()" class="button">
+                    Close
+                </button>
+            </div>
+
+            <!-- <div id="copyright"> -->
+            <span class="vspace"></span>
+            <span class="copyrights">
+                &copy; 2022
+                <a href="http://mgeek.in" class="">mGeek.in</a>
+            </span>
+
+            <!-- </div> -->
         </div>
 
+
     </div>
+
 </div>

@@ -108,13 +108,12 @@ ol li {
 
 ol li:before {
     font-size: small;
-    margin-right: 10px;
+    /* margin-right: 10px; */
     content: counter(item);
     background: cyan;
     border-radius: 100%;
     color: #222222;
     padding: .1em;
-    margin: .5wdem;
     width: 1.2em;
     text-align: center;
     display: inline-block;
