@@ -34,10 +34,10 @@
     </div>
 
     <script>
-        function resetFunction() {
-            localStorage.clear()
-            sessionStorage.clear()
-        }
+        // function resetFunction() {
+        //     localStorage.clear()
+        //     sessionStorage.clear()
+        // }
         // document.getElementById("slidebar").innerHTML = customizer
         async function getHTML(name, target = null, type = 'innerHTML', storage = sessionStorage) {
             var response = ""
@@ -67,7 +67,7 @@
                     if (xhr.status >= 200) {
                         response = xhr.response
                         // save to local stoage
-                        // storage.setItem(name, response)
+                        storage.setItem(name, response)
                         await xhr.DONE
                         if (target != null) {
                             // alert(target)
@@ -107,10 +107,11 @@
         //             myFunction(this);
         //         }
         //     };
-        //     xhttp.open("GET", "./pages/", true);
+        //     xhttp.open("post", "./pages", true);
         //     xhttp.send();
-        //     alert(xhttp.response)
+        //     alert(`${xhttp.status} ${xhttp.response}`)
         // }
+        // loadDoc()
     </script>
 
 </body>

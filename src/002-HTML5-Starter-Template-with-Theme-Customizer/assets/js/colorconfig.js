@@ -1,12 +1,12 @@
 function cssVar(name, value) {
     // console.log(value)
-    if (name[0] != '-') name = '--' + name //allow passing with or without --
+    // if (name[0] != '-') name = '--' + name //allow passing with or without --
     if (value) document.documentElement.style.setProperty(name, value)
     return getComputedStyle(document.documentElement).getPropertyValue(name);
 }
 
 
-setTimeout(runonload, 200)
+setTimeout(runonload, 400)
 
 function runonload() {
     document.getElementById("bg1").value = cssVar("--hue")
@@ -28,8 +28,8 @@ function runonload() {
     // document.getElementById("FontSelect").value = cssVar("--font-h2")
 
 
-    // var colorConfig = [cssVar("--hue"), cssVar("--hueComp"), cssVar("--hueAscent"), cssVar(--huetextlight), cssVar(--huetextdark), cssVar(--bodyFontSize)]
-    // alert(colorConfig)
+
+
 
 
 
@@ -51,7 +51,6 @@ function runonload() {
         var currentValue = this.value
         document.getElementById("bg3disp").innerHTML = currentValue
         cssVar("--hueAscent", currentValue)
-        changeBodyFont()
     }
     var elem = document.getElementById("text-color-light")
     elem.oninput = function () {
@@ -72,9 +71,32 @@ function runonload() {
         cssVar("--body-font-size", currentValue)
         document.body.style.fontSize = currentValue * 16 + "px"
     }
-    closecustomizer()
-}
 
+
+
+
+}
+var savedColorConfig = localStorage.getItem("colorConfig")
+if (savedColorConfig != null) {
+    loadColorConfig(savedColorConfig)
+}
+function loadColorConfig(inputConfig = localStorage.getItem("colorConfig")) {
+    // alert(inputConfig)
+    // console.log(inputConfig[0])
+    var datain = localStorage.getItem("colorConfig")
+    // alert(datain)
+
+    // alert(datain)
+    cssVar("--hue", inputConfig[0]),
+        cssVar("--hueComp", inputConfig[1]),
+        cssVar("--hueAscent", inputConfig[2]),
+        cssVar("--huetextlight", inputConfig[3]),
+        cssVar("--huetextdark", inputConfig[4]),
+        cssVar("--body-font-size", inputConfig[5])
+
+    closecustomizer()
+
+}
 
 
 function changeBodyFont() {
@@ -101,3 +123,19 @@ function showCustomizer() {
 
 }
 
+function saveTheme() {
+    let colorConfig = [
+        cssVar("--hue"),
+        cssVar("--hueComp"),
+        cssVar("--hueAscent"),
+        cssVar("--huetextlight"),
+        cssVar("--huetextdark"),
+        cssVar("--body-font-size")]
+    localStorage.removeItem("colorConfig")
+    localStorage.setItem("colorConfig", colorConfig)
+}
+
+function resetFunction() {
+    localStorage.clear()
+    sessionStorage.clear()
+}
