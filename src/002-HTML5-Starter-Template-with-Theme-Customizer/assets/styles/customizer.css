@@ -31,6 +31,8 @@
 .slidecontainer {
     display: inline-grid;
     grid-column: 2;
+    position: sticky;
+    bottom: 0px;
 }
 
 .slider::-webkit-slider-thumb {

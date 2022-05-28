@@ -36,12 +36,13 @@
     <script>
         function resetFunction() {
             localStorage.clear()
+            sessionStorage.clear()
         }
         // document.getElementById("slidebar").innerHTML = customizer
-        async function getHTML(name, target = null, type = 'innerHTML') {
+        async function getHTML(name, target = null, type = 'innerHTML', storage = sessionStorage) {
             var response = ""
-            if (localStorage.getItem(name) != null) {
-                response = localStorage.getItem(name)
+            if (storage.getItem(name) != null) {
+                response = storage.getItem(name)
                 if (target != null) {
                     // alert(target)
                     // alert(response)
@@ -55,7 +56,7 @@
                     if (type == "append") document.getElementById(target).innerHTML += response
                 }
             }
-            if (localStorage.getItem(name) == null) {
+            if (storage.getItem(name) == null) {
                 let xhr = new XMLHttpRequest();
                 URL = `./${name}.html`
                 method = "GET"
@@ -65,7 +66,7 @@
                     // alert(`${xhr.onerror}Loaded: ${xhr.status} ${xhr.response} `);
                     if (xhr.status >= 200) {
                         response = xhr.response
-                        localStorage.setItem(name, response)
+                        storage.setItem(name, response)
                         await xhr.DONE
                         if (target != null) {
                             // alert(target)
@@ -97,7 +98,19 @@
     <script src="./assets/js/sitescript.js"></script>
     <script src="./assets/js/colorconfig.js"></script>
     <script type="text/javascript" src="https://generatorjs.mgeek.in/cdn/generator.js" async defer> </script>
-
+    <script>
+        // function loadDoc() {
+        //     var xhttp = new XMLHttpRequest();
+        //     xhttp.onreadystatechange = function () {
+        //         if (this.readyState == 4 && this.status == 200) {
+        //             myFunction(this);
+        //         }
+        //     };
+        //     xhttp.open("GET", "./pages/", true);
+        //     xhttp.send();
+        //     alert(xhttp.response)
+        // }
+    </script>
 
 </body>
 
