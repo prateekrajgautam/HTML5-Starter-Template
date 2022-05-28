@@ -43,7 +43,7 @@
 }
 
 .mnnitbackground {
-    width: 100%;
+    width: 100vw;
     background-repeat: no-repeat;
     background-size: contain;
     filter: brightness(30%);
