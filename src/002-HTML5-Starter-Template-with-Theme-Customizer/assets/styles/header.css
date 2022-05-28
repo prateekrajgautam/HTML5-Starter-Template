@@ -51,32 +51,31 @@ header {
 
 .logo {
     /* padding-top: 5px; */
-    position: fixed;
+    position: absolute;
+    top: .5em;
     display: inline-block;
     height: 1.5em;
     width: 1.5em;
 }
 
 .logo:hover {
-    position: fixed;
+    position: absolute;
+    top: .5em;
     height: 10em;
     width: 10em;
 }
 
-.menu,
-nav>ul {
+.menu {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
     align-items: center;
     background-color: var(--color-nav-bg);
     padding-inline: 1em;
 }
 
-li {
+.nav>ul>li {
     padding-inline: 0px;
     margin-inline: 0px;
-    ;
 }
 
 .nav-item,

@@ -1,11 +1,13 @@
 // To toggle menu on click
-window.addEventListener("load", () => {
-    setTimeout({
-        var toggle = document.getElementsByClassName('toggle')[0]
-            // toggle.classList.add("active")
-            toggle.addEventListener("click", toggleItems)
-            var codeblocks = document.getElementsByClassName('code')
-            for(i = 0; i<codeblocks.length; i++) {
+window.addEventListener("load", () => { setTimeout(delayrun, 400) })
+
+
+function delayrun() {
+    var toggle = document.getElementsByClassName('toggle')[0]
+    // toggle.classList.add("active")
+    toggle.addEventListener("click", toggleItems)
+    var codeblocks = document.getElementsByClassName('code')
+    for (i = 0; i < codeblocks.length; i++) {
         addCopyfunction(codeblocks[i])
     }
     codeblocks = document.getElementsByTagName('code')
@@ -16,10 +18,7 @@ window.addEventListener("load", () => {
     for (i = 0; i < codeblocks.length; i++) {
         addCopyfunction(codeblocks[i])
     }
-}, 200)
 }
-)
-
 function toggleItems() {
     var items = document.getElementsByClassName("nav-items")
     for (i = 0; i < items.length; i++) {

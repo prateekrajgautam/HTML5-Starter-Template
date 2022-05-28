@@ -2,22 +2,16 @@
 #app {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: minmax(200px, 1fr) 3fr;
 
-
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     color: var(--color-text-light);
 }
 
 .Customizer {
     display: inline-grid;
     grid-column: auto;
+
 }
 
 .themeselectionfloat {
@@ -27,8 +21,7 @@
 
 #maincontent {
     display: inline-grid;
-    grid-column: auto;
-    max-width: 100%;
+    width: 100%;
 }
 
 #appmain {
@@ -134,10 +127,13 @@
 .appcontainer,
 .container {
     padding-inline: 15vw;
-
     margin: 0;
 }
 
+.container-small {
+    padding-inline: 5vw;
+    margin: 0;
+}
 
 section,
 .section {

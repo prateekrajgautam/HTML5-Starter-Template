@@ -1,62 +1,41 @@
-/* .mnnitbackground:before {
-    background: url("../images/MNNIT_main_building.jpg");
-    z-index: -1;
-    user-select: none;
-    background-repeat: no-repeat;
-    filter: brightness(10%);
-    position: absolute;
-    top: 0px;
-    left: 0px;
-}
-
-*/
-/* .hero,
-#hero {
-    position: relative;
-    z-index: 1;
-
-    /* user-select: none; 
- background-color: hsla(0, 0, 0, 0);
- background-color: var(--hueAscent);
-  background-image: url("../images/MNNIT_main_building.jpg"); 
- background-size: contain;
- background-repeat: no-repeat;
- background-blend-mode: color-burn;
- display: grid;
- }
-
- .hero:before {
-     position: absolute;
-     top: 0px;
-     /* left: 0px;right: 100vw; 
-     content: url("../images/MNNIT_main_building.jpg");
-     filter: brightness(5%);
-     z-index: -2;
- }
-*/
 .hero {
     display: grid;
+    grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
-    justify-content: center;
-    min-height: 100vh;
+    /* justify-content: center; */
 
+}
+
+* {
+    font-size: clamp(.5rem, 8.333vw, 1.5rem);
 }
 
 .mnnitbackground {
-    width: 100vw;
-    background-repeat: no-repeat;
-    background-size: contain;
-    filter: brightness(30%);
+    min-width: 100%;
+
+    /* background-repeat: no-repeat;
+    background-size: contain; */
+    filter: brightness(50%);
+}
+
+.mnnitbackground>img {
+    width: 100%;
+    /* aspect-ratio: 16/5; */
+    height: 50vh;
+    padding: 0px;
+    margin: 0px;
 }
 
 
-
 .herocontent {
+    display: inline-grid;
     position: relative;
     z-index: 1;
     background-color: hsla(var(--hue), 50%, 50%, .1);
     color: var(--color-text-light);
-    padding-inline: 5%;
+    padding-inline: 10%;
+    align-self: center;
+
 }
 
 .herocontent>h1,
