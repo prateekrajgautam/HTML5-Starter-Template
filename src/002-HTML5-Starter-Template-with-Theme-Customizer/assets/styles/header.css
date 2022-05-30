@@ -72,6 +72,7 @@ header {
     align-items: center;
     background-color: var(--color-nav-bg);
     padding-inline: 1em;
+    width: 100vw;
 }
 
 .nav>ul>li {
@@ -154,6 +155,9 @@ header {
         display: none;
     }
 
+    .toggle {
+        display: inline-block;
+    }
 }
 
 /* Tabled Menu */
@@ -199,6 +203,7 @@ header {
 
     .toggle {
         order: 2;
+        display: inline-block;
     }
 
 

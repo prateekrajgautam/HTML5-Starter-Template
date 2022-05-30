@@ -14,7 +14,7 @@
     --alpha: 1;
 
 
-    --hueAscent: 60;
+    --hueAscent: 37;
     --hueComp: calc(var(--hue) + 180);
     --hueSecond: 30;
     --lightText: calc(calc(100% - var(--light)) - var(sat));

@@ -89,14 +89,15 @@
 
             return response
         }
-        function reloadAll() {
-            var customizer = getHTML('includes/customizer', 'slidebar', "outerHTML")
-            var footer = getHTML('includes/footer', 'footer', 'outerHTML')
-            var header = getHTML('includes/header', 'header', 'outerHTML')
-            getHTML('appmaindemo', 'content', 'outerHTML')
-            var hero = getHTML('includes/hero', 'hero', 'outerHTML')
-            var map = getHTML('includes/map', 'map', 'outerHTML')
-            getHTML('includes/demo', 'demo', 'outerHTML')
+        async function reloadAll() {
+            var customizer = await getHTML('includes/customizer', 'slidebar', "outerHTML")
+            var footer = await getHTML('includes/footer', 'footer', 'outerHTML')
+            var header = await getHTML('includes/header', 'header', 'outerHTML')
+            await getHTML('appmaindemo', 'content', 'outerHTML')
+            var hero = await getHTML('includes/hero', 'hero', 'outerHTML')
+            var map = await getHTML('includes/map', 'appmain', "append")
+            await getHTML('includes/demo', 'demo', 'outerHTML')
+            await getHTML('pages/sponshorship', 'appmain', "append")
         }
         reloadAll()
 

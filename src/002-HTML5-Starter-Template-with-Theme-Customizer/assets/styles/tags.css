@@ -141,16 +141,17 @@ button {
     padding: .5em;
     /* background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #0af7ff), color-stop(80%, #75faff), to(#0af7ff)) no-repeat scroll 0; */
     background: linear-gradient(0deg,
-            hsl(var(--hueAscent), 100%, 57%) 10%,
+            hsl(var(--hueAscent), var(--sat), var(--light)),
             hsl(var(--hueAscent), 100%, 80%) 80%,
-            hsl(var(--hueAscent), 100%, 57%) 100%),
+            hsl(var(--hueAscent), var(--sat), var(--light)) 100%),
         no-repeat scroll 0;
-    color: var(--color-text-dark);
+    color: hsl(calc(var(--hueAscent) + 180), var(--sat), 5%);
     text-align: center;
-    text-shadow: none;
+    text-shadow: 1px 1px 1px 1px 1px 5px hsl(var(--hueAscent), var(--sat), var(--light));
+    ;
     text-transform: capitalize;
     border-radius: .01em;
-    box-shadow: 2px 2px 5px #000000;
+    box-shadow: 1px 1px 5px hsl(var(--hueAscent), var(--sat), var(--light));
     cursor: pointer;
     margin-inline: 1em;
     margin-block: 1em;
@@ -169,7 +170,7 @@ button:hover,
     display: inline-block;
     outline: 0.2em solid var(--colorAscent);
     padding: .5em;
-    background: rgba(1, 1, 1, 0.1);
+    background: rgba(1, 1, 1, .5);
     color: var(--color-text-light);
     text-align: center;
     text-shadow: none;

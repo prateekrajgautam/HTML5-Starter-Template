@@ -120,3 +120,16 @@ function darkMode() {
     cssVar("--light", "5%")
     cssVar("--sat", "85%")
 }
+
+
+const copyright = `<div id="copyright">
+<span id="copyurl">Designed with
+    <a href="https://generatorjs.mgeek.in">GeneratorJs</a>
+    &copy; 2022
+    <a href="http://mgeek.in" class="none">mGeek.in</a>
+    <a href="http://mnnit.ac.in.in">MNNIT</a>
+</span>
+<span id="copyauthor">Designed by
+    <a href="http://mgeek.in/webmaster">Dr. Prateek Raj Gautam</a>
+</span>
+</div>`

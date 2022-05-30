@@ -7,6 +7,7 @@
 
 .ieee-links {
     display: inline-grid;
+    padding-block: 2em;
 }
 
 .mnnitfooter {
@@ -15,6 +16,19 @@
     grid-column: span 2;
 
 }
+
+
+.flex-row-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex-row-wrap>ul {
+    margin-left: 2em
+}
+
 
 .flex-row-wrap-start {
     display: flex;
