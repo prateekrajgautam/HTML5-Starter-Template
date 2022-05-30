@@ -1,14 +1,22 @@
 .hero {
+    /* --sat: 70%; */
+
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
     /* justify-content: center; */
+    min-height: 100vh;
+    --satHero: calc(var(--sat) + 10%);
+    --lightHero: calc(var(--light) - 15%);
+    background-color: hsla(var(--hue), var(--sat), var(--light), 1);
 
 }
 
-* {
-    font-size: clamp(.5rem, 8.333vw, 1.5rem);
-}
+
+
+/* * {
+    font-size: clamp(.5rem, 5vw, 1.5rem);
+} */
 
 .mnnitbackground {
     min-width: 100%;
@@ -31,7 +39,6 @@
     display: inline-grid;
     position: relative;
     z-index: 1;
-    background-color: hsla(var(--hue), 50%, 50%, .1);
     color: var(--color-text-light);
     padding-inline: 10%;
     align-self: center;

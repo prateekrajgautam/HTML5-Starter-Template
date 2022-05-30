@@ -8,7 +8,7 @@
 .toggle:not(.active)>.bars {
     position: relative;
     display: inline-block;
-    background-color: var(--color-text-light);
+    background-color: var(--colorAscentBright);
     height: .15em;
     width: 1em;
     border-radius: 1px;
@@ -18,7 +18,7 @@
 .toggle:not(.active)>.bars::before {
     position: absolute;
     display: inline-block;
-    background-color: var(--color-text-light);
+    background-color: var(--colorAscentBright);
     height: .15em;
     width: 1em;
     border-radius: 1px;
@@ -29,7 +29,7 @@
 .toggle:not(.active)>.bars::after {
     position: absolute;
     display: inline-block;
-    background-color: var(--color-text-light);
+    background-color: var(--colorAscentBright);
     height: .15em;
     width: 1em;
     border-radius: 1px;

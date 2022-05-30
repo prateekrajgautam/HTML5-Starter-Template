@@ -5,7 +5,8 @@
 header {
     position: sticky;
     top: 0px;
-    z-index: 2;
+    z-index: 4;
+    box-shadow: 1px 0px 5px blackw;
 }
 
 .nav-logo {

@@ -15,15 +15,17 @@
             <li class="nav-items"><a href="./">home</a></li>
             <li class="nav-items"><a href="#tracks" onclick="getHTML('pages/tracks','appmain')">Tracks</a>
             </li>
-            <li class="nav-items"><a href="./updates">Updates</a></li>
-            <li class="nav-items"><a href="#Contact">Contact</a></li>
+            <li class="nav-items"><a href="#updates" onclick="getHTML('pages/updates','appmain')">Updates</a></li>
+            <li class="nav-items"><a href="#contact">Contact</a></li>
             <!-- <li class="nav-items nav-login ">
                 <button class="button" onclick="login">Login</button>
                 <button class="button-blank" onclick="signup">Sign Up</button>
             </li> -->
             <li class="toggle"><span class="bars"></span></li>
-            <li id="showCustomizer" class="nav-items showCustomizer" onclick="showCustomizer()">
-                <span class="material-symbols-rounded">tune
+            <li id="showCustomizer" class="showCustomizer nav-items " onclick="showCustomizer()">
+                <span class="showColorTheme">
+                    <span class="material-symbols-rounded">tune
+                    </span>
                 </span>
             </li>
         </ul>

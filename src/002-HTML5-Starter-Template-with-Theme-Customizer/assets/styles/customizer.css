@@ -2,11 +2,13 @@
 
     /* position: relative; */
     display: grid;
-    grid-template-rows: minmax(60px, 4em) 80vh 1fr;
+    grid-template-rows: minmax(60px, 40px) 80vh 1fr;
     background-color: hsl(120, 10%, 10%);
     color: hsl(120, 10%, 95%);
     /* scroll-behavior: auto; */
     padding: 5px;
+    z-index: 2;
+    max-width: 100%;
 }
 
 #themeselectionfloat {
@@ -15,17 +17,10 @@
     background-color: hsl(120, 10%, 10%);
     color: hsl(var(--hueTextLight), 10%, 95%);
     grid-template-columns: 1fr 10fr 1fr;
-    /* grid-template-columns: 10px 5fr 10px; */
-    /* grid-template-rows: 2em 1fr 5fr; */
-    padding: 5px;
-    /* scroll-behavior: auto; */
-    /* position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-    bottom: 0px; */
     position: sticky;
     position: -webkit-sticky;
     top: 0px;
+    overflow-x: auto;
 }
 
 .slidecontainer {
@@ -33,6 +28,10 @@
     grid-column: 2;
     position: sticky;
     bottom: 0px;
+}
+
+.slidecontainer>p>span {
+    max-width: 80%;
 }
 
 .slider::-webkit-slider-thumb {
@@ -67,23 +66,27 @@
     font-size: .8em;
     position: absolute;
     top: 170%;
-    left: 0;
-    right: 0;
+    /* left: 0; */
+    /* right: 0; */
     opacity: 0.75;
     background-color: #323232;
     color: #fff;
     padding: 4px;
     border-radius: 3px;
     display: block;
+    width: 6em;
 
 }
 
+.showColorTheme {
+    padding-inline: 2em;
+
+}
 
 #themeConfig {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(60px, auto));
     grid-gap: 10px;
-    padding: 5px;
 }
 
 #themeConfig>.button {
@@ -95,7 +98,7 @@
 
 .vspace {
     display: block;
-    padding-block: 1em;
+    padding-block: 5px;
     content: ""
 }
 

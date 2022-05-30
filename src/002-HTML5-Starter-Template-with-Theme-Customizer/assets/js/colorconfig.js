@@ -1,119 +1,81 @@
 function cssVar(name, value) {
+    var r = document.querySelector(':root')
+    var rs = getComputedStyle(r)
     // console.log(value)
-    // if (name[0] != '-') name = '--' + name //allow passing with or without --
-    if (value) document.documentElement.style.setProperty(name, value)
-    return getComputedStyle(document.documentElement).getPropertyValue(name);
+    if (name[0] != '-') name = '--' + name //allow passing with or without --
+    if (value) r.style.setProperty(name, value)
+    return rs.getPropertyValue(name);
 }
+
+var themeSliders = document.getElementsByClassName("themeslider")
+for (i = 0; i < themeSliders.length; i++) {
+    var slider = themeSliders[i]
+    slider.addEventListener("input", (e) => {
+        cssVar(`--${e.target.id}`, e.target.value)
+        document.getElementById(`${e.target.id}Disp`).innerHTML = e.target.value
+    })
+}
+
+
+var elem = document.getElementById("fontSize")
+elem.oninput = function () {
+    var currentValue = this.value
+    document.getElementById("fontSizeDisp").innerHTML = currentValue
+    cssVar("fontSize", currentValue)
+    document.body.style.fontSize = currentValue * 16 + "px"
+    changeBodyFont()
+}
+
+
+
+
 
 
 setTimeout(runonload, 400)
 
 function runonload() {
-    document.getElementById("bg1").value = cssVar("--hue")
-
-    document.getElementById("bg2").value = cssVar("--hueComp")
-    document.getElementById("bg3").value = cssVar("--hueAscent")
 
 
-    document.getElementById("text-color-light").value = cssVar("--huetextlight")
-
-
-    document.getElementById("text-color-dark").value = cssVar("--huetextdark")
-
-
-    document.getElementById("text-font-size").value = cssVar("--body-font-size") / 16.0
-
-
-
-    // document.getElementById("FontSelect").value = cssVar("--font-h2")
-
-
-
-
-
-
-
-    var elem = document.getElementById("bg1")
-    elem.oninput = function () {
-        var currentValue = this.value
-        document.getElementById("bg1disp").innerHTML = currentValue
-        cssVar("--hue", currentValue)
-    }
-    var elem = document.getElementById("bg2")
-    elem.oninput = function () {
-        var currentValue = this.value
-        document.getElementById("bg2disp").innerHTML = currentValue
-        cssVar("--hueComp", currentValue)
+    var themeSliders = document.getElementsByClassName("themeslider")
+    for (i = 0; i < themeSliders.length; i++) {
+        var slider = themeSliders[i]
+        document.getElementById(`${themeSliders[i].id}Disp`).value = cssVar(`--${themeSliders[i].id}`)
     }
 
-    var elem = document.getElementById("bg3")
-    elem.oninput = function () {
-        var currentValue = this.value
-        document.getElementById("bg3disp").innerHTML = currentValue
-        cssVar("--hueAscent", currentValue)
-    }
-    var elem = document.getElementById("text-color-light")
-    elem.oninput = function () {
-        var currentValue = this.value
-        document.getElementById("text-color-light-disp").innerHTML = currentValue
-        cssVar("--huetextlight", currentValue)
-    }
-    var elem = document.getElementById("text-color-dark")
-    elem.oninput = function () {
-        var currentValue = this.value
-        document.getElementById("text-color-dark-disp").innerHTML = currentValue
-        cssVar("--huetextdark", currentValue)
-    }
-    var elem = document.getElementById("text-font-size")
-    elem.oninput = function () {
-        var currentValue = this.value
-        document.getElementById("text-font-size-disp").innerHTML = currentValue
-        cssVar("--body-font-size", currentValue)
-        document.body.style.fontSize = currentValue * 16 + "px"
-    }
+
+
+
+
+
+
 
 
 
 
 }
-var savedColorConfig = localStorage.getItem("colorConfig")
-if (savedColorConfig != null) {
-    loadColorConfig(savedColorConfig)
+
+if (sessionStorage.getItem("colorConfig") == null) saveTheme()
+if (sessionStorage.getItem("colorConfig") != null) {
+    var savedConfig = JSON.parse(sessionStorage.getItem("colorConfig"))
+    loadColorConfig(savedConfig)
 }
-function loadColorConfig(inputConfig = localStorage.getItem("colorConfig")) {
-    // alert(inputConfig)
-    // console.log(inputConfig[0])
-    var datain = localStorage.getItem("colorConfig")
-    // alert(datain)
-
-    // alert(datain)
-    cssVar("--hue", inputConfig[0]),
-        cssVar("--hueComp", inputConfig[1]),
-        cssVar("--hueAscent", inputConfig[2]),
-        cssVar("--huetextlight", inputConfig[3]),
-        cssVar("--huetextdark", inputConfig[4]),
-        cssVar("--body-font-size", inputConfig[5])
-
+function loadColorConfig(inputConfig = JSON.parse(sessionStorage.getItem("colorConfig"))) {
+    cssVar("--hue", inputConfig[0])
+    cssVar("--hueAscent", inputConfig[1])
+    cssVar("--fontsize", inputConfig[2])
+    cssVar("--font-body", inputConfig[3])
+    changeBodyFont(inputConfig[3])
     closecustomizer()
-
 }
 
 
-function changeBodyFont() {
-    var fontselecteled = document.getElementById("FontSelect").value
-    document.body.style.fontFamily = fontselecteled
-    var all_headings = document.querySelectorAll("h1,h2,h3,h4,h5,h6")
-    for (i = 0; i < all_headings.length; i++) {
-        cssVar("--font-h2", `"${fontselecteled}";`)
-        all_headings[i].style.fontFamily = fontselecteled
-    }
-}
+
 
 function closecustomizer() {
     document.getElementById("Customizer").style.display = "none";
     document.getElementById("app").style.gridTemplateColumns = '1fr'
     // document.getElementById("showCustomizer").onclick = "showCustomizer"
-
+    saveTheme()
 }
 
 function showCustomizer() {
@@ -124,18 +86,37 @@ function showCustomizer() {
 }
 
 function saveTheme() {
-    let colorConfig = [
+    var colorConfig = [
         cssVar("--hue"),
-        cssVar("--hueComp"),
         cssVar("--hueAscent"),
-        cssVar("--huetextlight"),
-        cssVar("--huetextdark"),
-        cssVar("--body-font-size")]
-    localStorage.removeItem("colorConfig")
-    localStorage.setItem("colorConfig", colorConfig)
+        cssVar("--fontsize"),
+        document.getElementById("FontSelect").value
+    ]
+    sessionStorage.removeItem("colorConfig")
+    sessionStorage.setItem("colorConfig", JSON.stringify(colorConfig))
 }
 
 function resetFunction() {
+    cssVar("--light", cssVar("--lightDefault"))
+    cssVar("--sat", cssVar("--satDefault"))
+    cssVar("--hu", cssVar("--hueDefault"))
     localStorage.clear()
     sessionStorage.clear()
+    reloadAll()
+    loadColorConfig()
+}
+
+function changeBodyFont(fontselecteled = document.getElementById("FontSelect").value) {
+    document.body.style.fontFamily = fontselecteled
+    var all_headings = document.querySelectorAll("h1,h2,h3,h4,h5,h6")
+    for (i = 0; i < all_headings.length; i++) {
+        cssVar("--font-body", `"${fontselecteled}";`)
+        all_headings[i].style.fontFamily = fontselecteled
+    }
+}
+
+
+function darkMode() {
+    cssVar("--light", "5%")
+    cssVar("--sat", "85%")
 }

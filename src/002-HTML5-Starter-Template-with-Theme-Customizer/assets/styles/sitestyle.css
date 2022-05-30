@@ -23,7 +23,7 @@
     -webkit-transition: all 100ms ease-in-out;
     transition: all 100ms ease-in-out;
     color: inherit;
-    font-size: var(--body-font-size);
+    font-size: var(--fontSize);
     /* font-weight: 900; */
 }
 
@@ -31,7 +31,7 @@
     font-size: 1rem;
     font-family: var(--font-body);
     /* text-shadow: 0.01em 0.01em 0.02em var(--colorShadow); */
-    text-shadow: 0.01em 0.01em 0.02em var(--colorGlow);
+    text-shadow: 0.01em 0.01em 0.02em var(--lightTextShadow);
 
 }
 

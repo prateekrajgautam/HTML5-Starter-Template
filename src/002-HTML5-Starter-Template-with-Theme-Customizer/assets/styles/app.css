@@ -2,7 +2,7 @@
 #app {
     position: relative;
     display: grid;
-    grid-template-columns: minmax(200px, 1fr) 3fr;
+    grid-template-columns: minmax(auto, 1fr) 4fr;
 
     /* justify-content: space-between; */
     color: var(--color-text-light);
@@ -135,8 +135,22 @@
     margin: 0;
 }
 
-section,
+section {
+    min-height: 100vh;
+    padding-top: 10em;
+    padding-bottom: 10em;
+    background-color: hsla(var(--hue), var(--sat), var(--light), var(--alpha));
+    color: hsla(var(--hueText), var(--satText), var(--lightText), var(--alphaText));
+}
+
 .section {
+    min-height: 100vh;
+    padding-top: 10em;
+    padding-bottom: 10em;
+    /* border-bottom: 1px solid hsla(var(--hue), 10%, 10%, .1); */
+}
+
+.section-large {
     min-height: 100vh;
     padding-top: 10em;
     padding-bottom: 10em;
@@ -149,34 +163,43 @@ section,
 }
 
 
-.section:nth-child(odd) {
-    background-color: hsla(var(--hue), 10%, 10%, .2);
-    color: var(--color-text-light)
-}
+.section:nth-child(odd) {}
 
 .section:nth-child(even) {
-    background-color: hsla(var(--hue), 10%, 10%, .2);
-    color: var(--color-text-dark)
+    --light: calc(var(--light) - 10%);
+    --sat: calc(var(--sat) + 10%);
 }
 
 .section-light {
-    background-color: hsla(var(--hue), 10%, 85%, 1);
-    color: var(--color-text-dark)
+    --light: 85%;
+    --sat: 15%;
+
+    --lightText: 5%;
+    /* background-color: hsla(var(--hue), 10%, 85%, 1);
+    color: var(--color-text-dark) */
 }
 
 .section-lighter {
-    background-color: hsla(var(--hueComp), 10%, 95%, 1);
-    color: var(--color-text-darker)
+    --light: 95%;
+    --sat: 5%;
+    --lightText: 15%;
+    /* background-color: hsla(var(--hueComp), 10%, 95%, 1); */
+    /* color: var(--color-text-darker) */
 }
 
 .section-dark {
-    background-color: hsla(var(--hue), 80%, 40%, 1);
-    color: var(--color-text-lighter)
+    --light: 30%;
+    --sat: 80%;
+
+    /* background-color: hsla(var(--hue), 80%, 40%, 1);
+    color: var(--color-text-lighter) */
 }
 
 .section-darker {
-    background-color: hsla(var(--hue), 70%, 15%, 1);
-    color: var(--color-text-light)
+    --light: 15%;
+    --sat: 90%;
+    /* background-color: hsla(var(--hue), 70%, 15%, 1);
+    color: var(--color-text-light) */
 }
 
 .section-overlay {

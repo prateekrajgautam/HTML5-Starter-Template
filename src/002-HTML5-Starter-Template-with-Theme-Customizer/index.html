@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Template Tester</title>
     <link rel="stylesheet" href="./assets/styles/sitestyle.css">
     <link rel="stylesheet"
@@ -89,34 +89,28 @@
 
             return response
         }
-        // document.getElementById("content").innerHTML = getHTML('appmaindemo')
-        getHTML('includes/customizer', 'slidebar', "outerHTML")
-        getHTML('includes/footer', 'footer', 'outerHTML')
-        getHTML('includes/header', 'header', 'outerHTML')
-        getHTML('appmaindemo', 'content', 'outerHTML')
+        function reloadAll() {
+            var customizer = getHTML('includes/customizer', 'slidebar', "outerHTML")
+            var footer = getHTML('includes/footer', 'footer', 'outerHTML')
+            var header = getHTML('includes/header', 'header', 'outerHTML')
+            getHTML('appmaindemo', 'content', 'outerHTML')
+            var hero = getHTML('includes/hero', 'hero', 'outerHTML')
+            var map = getHTML('includes/map', 'map', 'outerHTML')
+            getHTML('includes/demo', 'demo', 'outerHTML')
+        }
+        reloadAll()
 
     </script>
     <script src="./assets/js/sitescript.js"></script>
     <script src="./assets/js/colorconfig.js"></script>
     <script type="text/javascript" src="https://generatorjs.mgeek.in/cdn/generator.js" async defer> </script>
     <script>
-        // function loadDoc() {
-        //     var xhttp = new XMLHttpRequest();
-        //     xhttp.onreadystatechange = function () {
-        //         if (this.readyState == 4 && this.status == 200) {
-        //             myFunction(this);
-        //         }
-        //     };
-        //     xhttp.open("post", "./pages", true);
-        //     xhttp.send();
-        //     alert(`${xhttp.status} ${xhttp.response}`)
-        // }
-        // loadDoc()
+
     </script>
 
 </body>
 
-<!-- <script src="/assets/js/htmx.min.js.gz"></script> -->
+
 
 
 </html>

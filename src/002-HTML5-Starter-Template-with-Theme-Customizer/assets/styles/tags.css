@@ -248,5 +248,6 @@ select {
     padding: 5px;
     background-color: var(--colorAscent);
     border-radius: 5px;
-    color: grey;
+    color: hsl(calc(var(--hueAscent) + 180), var(--satText), 50%);
+    width: 100%;
 }
