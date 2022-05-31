@@ -8,23 +8,28 @@
     --lightHero: calc(var(--light) - 15%);
     background-color: hsla(var(--hue), var(--sat), var(--light), 1);
     color: hsla(var(--hueText), var(--satText), var(--lightText), var(--alphaText));
-
+    /* font-size: clamp(1rem, 2vw, 1.2rem); */
 }
 
 
 /* HERO SECTION */
 #hero h1 {
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 5vw, 3rem);
     font-weight: bolder;
     font-family: 'Exo', 'Arial Narrow', Arial, sans-serif;
 }
 
+#hero h2 {
+    font-size: clamp(1rem, 3vw, 2rem);
+}
+
 #hero p {
     padding: 1em;
-    font-size: large;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
     line-height: 1.8em;
     font-weight: 500;
 }
+
 /* * {
     font-size: clamp(.5rem, 5vw, 1.5rem);
 } */

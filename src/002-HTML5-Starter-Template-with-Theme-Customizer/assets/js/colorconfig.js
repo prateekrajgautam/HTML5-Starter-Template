@@ -23,7 +23,7 @@ elem.oninput = function () {
     document.getElementById("fontSizeDisp").innerHTML = currentValue
     cssVar("fontSize", currentValue)
     document.body.style.fontSize = currentValue * 16 + "px"
-    changeBodyFont()
+    // changeBodyFont()
 }
 
 
@@ -62,7 +62,7 @@ if (sessionStorage.getItem("colorConfig") != null) {
 function loadColorConfig(inputConfig = JSON.parse(sessionStorage.getItem("colorConfig"))) {
     cssVar("--hue", inputConfig[0])
     cssVar("--hueAscent", inputConfig[1])
-    cssVar("--fontsize", inputConfig[2])
+    cssVar("--fontSize", inputConfig[2])
     cssVar("--font-body", inputConfig[3])
     changeBodyFont(inputConfig[3])
     closecustomizer()
@@ -96,7 +96,7 @@ function saveTheme() {
     var colorConfig = [
         cssVar("--hue"),
         cssVar("--hueAscent"),
-        cssVar("--fontsize"),
+        cssVar("--fontSize"),
         document.getElementById("FontSelect").value
     ]
     sessionStorage.removeItem("colorConfig")

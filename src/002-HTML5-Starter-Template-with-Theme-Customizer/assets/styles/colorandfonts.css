@@ -59,22 +59,26 @@
 
     /* header navbar */
     --color-nav-bg: hsla(var(--hue), 30%, 10%, 1);
-}
 
 
-* {
-    --font-body: 'Poppins', sans-serif, "Exo", "Verdana", "Roboto";
+
+    --font-body: 'Poppins';
     --font-emph: "Cutive Mono";
-    --font-h1: "Bebas Neue", "Arial";
-    --font-h2: 'Poppins', sans-serif, "Cutive Mono", "Play", "Arial";
-    --font-h3: 'Poppins', sans-serif, "Bebas Neue", "Verdana", "Arial";
-    --font-h4: 'Poppins', sans-serif, "Comic Neue", "Arial";
-    --font-h5: 'Poppins', sans-serif, "Dancing Script", "Verdana", "Arial";
-    --font-h6: "Dancing Script", "Verdana", "Arial";
+    --font-h1: var(--font-body), "Bebas Neue", "Arial";
+    --font-h2: var(--font-body), 'Poppins', "sans serif", "Cutive Mono", "Play", "Arial";
+    --font-h3: var(--font-body), 'Poppins', "sans serif", "Bebas Neue", "Verdana", "Arial";
+    --font-h4: var(--font-body), 'Poppins', "sans serif", "Comic Neue", "Arial";
+    --font-h5: var(--font-body), 'Poppins', "sans serif", "Dancing Script", "Verdana", "Arial";
+    --font-h6: var(--font-body), "Dancing Script", "Verdana", "Arial";
     --font-code: "Cutive Mono", "Arial", "Consolas", "Monaco", "Liberation Mono", "Lucida Console", "monospace";
     --font-copyrights: "Exo", "Verdana";
-    --fontSize: 16;
+    /* --fontSizeMin: 16px;
+    --fontSizeMax: 32px;
+    --fontSize: clamp(var(--fontSizeMin), 3vw, var(--fontSizeMax)); */
 }
+
+
+* {}
 
 ::selection {
     /* color: hsl(var(--hueAscent), 100%, 80%); */
