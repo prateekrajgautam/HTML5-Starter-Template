@@ -72,16 +72,23 @@ function loadColorConfig(inputConfig = JSON.parse(sessionStorage.getItem("colorC
 
 
 function closecustomizer() {
-    document.getElementById("Customizer").style.display = "none";
-    document.getElementById("app").style.gridTemplateColumns = '1fr'
+    document.getElementById("app").style.gridTemplateAreas = '"app"'
+    document.getElementById("customizer").style.display = "none";
+    // document.getElementById("customizer").style.gridArea = '"sidebarHidden"'
+    // document.getElementById("maincontent").style.gridColumn = "1 / 2"
     // document.getElementById("showCustomizer").onclick = "showCustomizer"
     saveTheme()
 }
 
 function showCustomizer() {
-    document.getElementById("Customizer").style.display = "inline-grid";
-    document.getElementById("app").style.gridTemplateColumns = 'minmax(300px, 1fr) 3fr'
-    // document.getElementById("showCustomizer").onclick = "closecustomizer()"
+    document.getElementById("app").style.gridTemplateAreas = '"sidebar app"'
+    // document.getElementById("customizer").style.gridArea = "sidebar"
+    // document.getElementById("maincontent").style.gridArea = "app"
+    document.getElementById("customizer").style.display = "inline-grid";
+    // document.getElementById("customizer").style.gridArea = `"sidebar";
+    // "sidebar app"`
+    // // document.getElementById("showCustomizer").onclick = "closecustomizer()"
+    // document.getElementById("maincontent").style.gridArea = "app"
 
 }
 
@@ -110,7 +117,7 @@ function changeBodyFont(fontselecteled = document.getElementById("FontSelect").v
     document.body.style.fontFamily = fontselecteled
     var all_headings = document.querySelectorAll("h1,h2,h3,h4,h5,h6")
     for (i = 0; i < all_headings.length; i++) {
-        cssVar("--font-body", `"${fontselecteled}";`)
+        cssVar("--font-body", `"${fontselecteled}"; `)
         all_headings[i].style.fontFamily = fontselecteled
     }
 }
@@ -122,7 +129,7 @@ function darkMode() {
 }
 
 
-const copyright = `<div id="copyright">
+const copyright = `< div id = "copyright" >
 <span id="copyurl">Designed with
     <a href="https://generatorjs.mgeek.in">GeneratorJs</a>
     &copy; 2022
@@ -132,4 +139,4 @@ const copyright = `<div id="copyright">
 <span id="copyauthor">Designed by
     <a href="http://mgeek.in/webmaster">Dr. Prateek Raj Gautam</a>
 </span>
-</div>`
+</div > `

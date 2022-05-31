@@ -1,25 +1,33 @@
-#Customizer {
+#customizer {
 
     /* position: relative; */
     display: grid;
-    grid-template-rows: minmax(60px, 40px) 80vh 1fr;
+    grid-template-rows: min(4em, 10vh) 80vh 1fr;
     background-color: hsl(120, 10%, 10%);
     color: hsl(120, 10%, 95%);
     /* scroll-behavior: auto; */
     padding: 5px;
     z-index: 2;
-    max-width: 100%;
+    /* height: 100vh; */
+    position: sticky;
+    top: 0px;
+}
+
+#customizer>h2 {
+    position: sticky;
+    top: 0px;
 }
 
 #themeselectionfloat {
     display: inline-grid;
+    grid-row: 2/3;
     max-width: 100%;
     background-color: hsl(120, 10%, 10%);
     color: hsl(var(--hueTextLight), 10%, 95%);
     grid-template-columns: 1fr 10fr 1fr;
     position: sticky;
     position: -webkit-sticky;
-    top: 0px;
+    top: min(3em);
     overflow-x: auto;
 }
 

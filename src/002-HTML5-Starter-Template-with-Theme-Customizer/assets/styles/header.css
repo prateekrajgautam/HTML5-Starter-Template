@@ -6,13 +6,13 @@ header {
     position: sticky;
     top: 0px;
     z-index: 4;
-    box-shadow: 1px 0px 5px blackw;
+    box-shadow: 1px 0px 4px hsl(var(--hueAscent), 60%, 30%);
 }
 
 .nav-logo {
-    flex: 1;
     display: flex;
     flex-direction: row;
+    flex: 1;
 }
 
 .nav-logo>a {
@@ -40,7 +40,6 @@ header {
 
 
 .nav-logo>a>span {
-
     display: inline-block;
     padding-inline: 5px;
 
@@ -72,7 +71,12 @@ header {
     align-items: center;
     background-color: var(--color-nav-bg);
     padding-inline: 1em;
-    width: 100vw;
+    /* max-width: 100%; */
+
+}
+
+.menu>li>a {
+    padding-block: .2em
 }
 
 .nav>ul>li {
@@ -92,7 +96,7 @@ header {
     flex-direction: column;
     padding-inline: 1em;
     order: 1;
-    padding: 1em;
+    padding-inline: 2em;
 }
 
 .toggle:hover {
@@ -137,18 +141,21 @@ header {
 
 
 
-@media all and (max-width:756px) {
+/* @media all and (max-width:756px) {
     .nav-items>a {
         padding-block: 2em;
     }
-}
-
-
+} */
 
 
 /* MOBILE */
 
 @media all and (max-width:468px) {
+    .menu {
+        width: min(100%, 100vw);
+        /* display: grid; */
+        /* grid-template-columns: 2fr 1fr; */
+    }
 
     .nav-items,
     .nav-login {
@@ -156,15 +163,16 @@ header {
     }
 
     .toggle {
+        order: 2;
         display: inline-block;
     }
 }
 
-/* Tabled Menu */
-
-
-
+/* Tabled Menu  */
 @media all and (min-width:468px) {
+    #appheader {
+        max-width: 100%;
+    }
 
     .menu {
         justify-content: space-between;
@@ -189,16 +197,12 @@ header {
         width: 100%;
     }
 
-    /* .nav-items>a:hover {
-        background-color: var(--colorAscent);
-        color: var(--color-text-dark);
-    } */
+
 
     .nav-login {
         width: auto;
         order: 1;
         display: flex;
-        /* padding-inline: 1em; */
     }
 
     .toggle {
@@ -229,7 +233,6 @@ header {
     .nav-login {
         width: auto;
         order: 2;
-        /* padding-inline: 1em; */
     }
 
     .nav-items {

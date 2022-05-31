@@ -1,8 +1,6 @@
 .hero {
-    /* --sat: 70%; */
-
     display: grid;
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
     grid-template-rows: auto 1fr;
     /* justify-content: center; */
     min-height: 100vh;
@@ -14,16 +12,24 @@
 }
 
 
+/* HERO SECTION */
+#hero h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+    font-family: 'Exo', 'Arial Narrow', Arial, sans-serif;
+}
 
+#hero p {
+    padding: 1em;
+    font-size: large;
+    line-height: 1.8em;
+    font-weight: 500;
+}
 /* * {
     font-size: clamp(.5rem, 5vw, 1.5rem);
 } */
 
 .mnnitbackground {
-    min-width: 100%;
-
-    /* background-repeat: no-repeat;
-    background-size: contain; */
     filter: brightness(50%);
 }
 
@@ -41,9 +47,9 @@
     position: relative;
     z-index: 1;
     color: var(--color-text-light);
-    padding-inline: 10%;
+    padding-inline: clamp(1em, 10vw, 10em);
     align-self: center;
-    padding: minmax(2em 10vh);
+    /* padding: min(1em 10vh); */
 
 }
 
@@ -52,11 +58,10 @@
     margin-bottom: .2em;
 }
 
-
 .hero-submit-button {
     border-radius: .7em;
     font-weight: 900;
-    padding: .5em;
+    padding-block: .2em;
     padding-inline: 1em;
     margin-inline: 1em;
     background-color: hsl(var(--hue), 70%, 40%);
