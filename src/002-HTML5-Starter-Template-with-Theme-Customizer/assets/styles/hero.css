@@ -70,12 +70,14 @@
     padding-inline: 1em;
     margin-inline: 1em;
     background-color: hsl(var(--hue), 70%, 40%);
-    color: hsl(var(--hueComp), 70%, 90%);
+    color: hsl(var(--hueComp), 70%, var(--lightText));
     outline: 1px solid hsl(var(--hueComp), 40%, 60%);
 
 }
 
 .hero-submit-button:hover {
     background-color: hsl(var(--hue), 90%, 60%);
+
+    color: hsl(var(--hueAscent), 70%, calc(var(--light) * .2));
     outline: 2px solid hsl(var(--hueAscent), 40%, 60%);
 }

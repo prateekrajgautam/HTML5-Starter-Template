@@ -19,10 +19,74 @@
                 'GRAD' 0,
                 'opsz' 48
         }
+
+        .preloader {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: 1fr;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: -100vh;
+            left: 0px;
+            z-index: 1000;
+            background-color: hsla(var(--hue), var(--sat), calc(var(--light) * .3), var(--alpha));
+            animation: hidepreloader 2s;
+            animation-iteration-count: 1;
+            opacity: 0;
+        }
+
+        .preloader:before {
+            display: hidden;
+            color: hsla(var(--hue), calc(var(--sat) * .9), calc(var(--light) * .2), var(--alpha));
+            content: "Loading";
+            position: absolute;
+            grid-template-columns: 1fr;
+            grid-auto-rows: 1fr;
+            align-self: center;
+            justify-self: center;
+            /* top: 0px;
+            left: 0px; */
+            font-size: clamp(10em, 20vw, 20em);
+            /* z-index: 1001; */
+        }
+
+        @keyframes hidepreloader {
+            /* 0% {
+                top: 0px;
+                display: hidden;
+                opacity: 0;
+            } */
+
+            0% {
+                top: 0px;
+                display: grid;
+                opacity: 1;
+            }
+
+            50% {
+                top: 0px;
+                display: grid;
+                opacity: 1;
+            }
+
+            75% {
+                top: 0px;
+                display: grid;
+                opacity: .7;
+            }
+
+            100% {
+                top: -100vh;
+                display: hidden;
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 
 <body>
+    <div class="preloader"></div>
     <div id="app">
         <div id="customizer"></div>
         <div id="maincontent">

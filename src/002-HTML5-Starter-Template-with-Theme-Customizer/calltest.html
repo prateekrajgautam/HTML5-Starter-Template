@@ -65,12 +65,7 @@
         </div>
     </div>
 
-    <!-- <script>
-        // function resetFunction() {
-        //     localStorage.clear()
-        //     sessionStorage.clear()
-        // }
-        // document.getElementById("slidebar").innerHTML = customizer
+    <script>
         async function getHTML(name, target = null, type = 'innerHTML', storage = sessionStorage) {
             var response = ""
             if (storage.getItem(name) != null) {
@@ -131,15 +126,15 @@
             await getHTML('includes/demo', 'demo', 'outerHTML')
             await getHTML('pages/sponshorship', 'appmain', "append")
         }
-        reloadAll()
+        // reloadAll()
+
+        getHTML('pages/test', 'app')
 
     </script>
     <script src="./assets/js/sitescript.js"></script>
     <script src="./assets/js/colorconfig.js"></script>
     <script type="text/javascript" src="https://generatorjs.mgeek.in/cdn/generator.js" async defer> </script>
-    <script> -->
 
-    <!-- </script> -->
 
 </body>
 
