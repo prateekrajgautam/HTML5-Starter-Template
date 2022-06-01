@@ -1,104 +1,85 @@
 <div id="customizer">
+    <!-- <div></div> -->
+    <div class="sticky">
+        <h2>Customizer</h2>
+        <div id="themeselectionfloat">
 
-    <h2>Customizer</h2>
-    <div id="themeselectionfloat">
-        <div class="slidecontainer">
-            <p>Dark mode
-                <span id="modeDisp"></span>
-                <!-- <input id="mode" class="slider themeslider" type="range" min="0" max="360" step=".1" value="0"> -->
-                <label class="toggleswitch">
-                    <input id="darkmodeswitch" type="checkbox" onclick=toggleDarkMode()>
-                    <span class="toggleswitchslider"></span>
-                </label>
-            </p>
-            <p>Theme color
-                <span id="hueDisp"></span>
-                <input id="hue" class="slider themeslider" type="range" min="0" max="360" step=".1" value="0">
-            </p>
-            <p>Ascent color
-                <span id="hueAscentDisp"></span>
-                <input id="hueAscent" class="slider themeslider" type="range" min="0" max="360" step="1" value="40">
-            </p>
+            <div class="slidecontainer">
+                <p>Dark mode
+                    <span id="modeDisp"></span>
+                    <!-- <input id="mode" class="slider themeslider" type="range" min="0" max="360" step=".1" value="0"> -->
+                    <label class="toggleswitch">
+                        <input id="darkmodeswitch" type="checkbox" onclick=toggleDarkMode()>
+                        <span class="toggleswitchslider"></span>
+                    </label>
+                </p>
+                <p>Theme color
+                    <span id="hueDisp"></span>
+                    <input id="hue" class="slider themeslider" type="range" min="0" max="360" step=".1" value="0">
+                </p>
+                <p>Ascent color
+                    <span id="hueAscentDisp"></span>
+                    <input id="hueAscent" class="slider themeslider" type="range" min="0" max="360" step="1" value="40">
+                </p>
 
-            <!-- <p>Color Intensity
-                <span id="satDisp"></span>
-                <input id="sat" class="slider themeslider" type="range" min="0" max="255" step="5" value="80">
-            </p>
 
-            <p>Brightness
-                <span id="lightDisp"></span>
-                <input id="light" class="slider themeslider" type="range" min="40" max="255" step="5" value="80">
-            </p> -->
-            <p>Text zoom
-                <span id="fontSizeDisp"></span>
-                <input id="fontSize" class="slider themeslider" type="range" min=".6" max="2.2" step=".4" value="1">
-            </p>
-            <!-- 
-            <p>Secondary color shade:<span id="bg2disp"></span>
-                <input id="bg2" type="range" min="1" max="360" step=".1" value="0" class="slider">
-            </p>
-            <p>Ascent color shade:<span id="bg3disp"></span>
-                <input id="bg3" type="range" min="1" max="360" step=".1" value="0" class="slider">
-            </p> -->
+                <p>Text zoom
+                    <span id="fontSizeDisp"></span>
+                    <input id="fontSize" class="slider themeslider" type="range" min=".6" max="2.2" step=".4" value="1">
+                </p>
 
-            <p>
 
-                <!-- <span>Font size <size:span id="text-font-size-disp"></size:span>
-                    <input id="text-font-size" type="range" min=".1" max="2" value="0" step=".1" class="slider">
-                </span> -->
-                <span>Font select
-                    <select id="FontSelect" onchange="changeBodyFont()">
-                        <option value="Poppins" selected="selected">Poppins</option>
-                        <option value="Play">Play</option>
-                        <option value="Exo">Exo</option>
-                        <option value="Cutive Mono">Cutive Mono</option>
-                        <option value="Consolas">Consolas</option>
-                        <option value="Monaco">Monaco</option>
-                        <option value="helvetica">helvetica</option>
-                        <option value="Robot">Robot</option>
-                        <option value="Verdana">Verdana</option>
-                        <option value="Bebas Neue">Bebas Neue</option>
-                        <option value="Dancing Script">Dancing Script</option>
-                        <option value="Arial">Arial</option>
-                        <option value="Times New Roman">Times New Roman</option>
-                        </option>
-                    </select>
-                </span>
-                <!-- <br />
-                <span class="none">Text shade light:<span id="text-color-light-disp"></span>
-                    <input id="text-color-light" type="range" min="1" max="360" step=".1" value="0" class="slider">
-                </span>
-                <br />
-                <span class="none">Text shade dark: <span id="text-color-dark-disp"> </span>
-                    <input id="text-color-dark" type="range" min="1" max="360" step=".1" value="0" class="slider">
-                </span> -->
-            </p>
-            <div id="themeConfig">
-                <button onclick="resetFunction()" class="button button-blank">
-                    Reload
-                </button>
-                <!-- <button onclick="darkMode()" class="button button-blank">
-                    Dark
-                </button> -->
-                <button onclick="saveTheme()" class="button button-blank">
-                    Save
-                </button>
-                <button onclick="closecustomizer()" class="button">
-                    Close
-                </button>
+                <p>
+
+
+                    <span>Font select
+                        <select id="FontSelect" onchange="changeBodyFont()">
+                            <option value="Poppins" selected="selected">Poppins</option>
+                            <option value="Play">Play</option>
+                            <option value="Exo">Exo</option>
+                            <option value="Cutive Mono">Cutive Mono</option>
+                            <option value="Consolas">Consolas</option>
+                            <option value="Monaco">Monaco</option>
+                            <option value="helvetica">helvetica</option>
+                            <option value="Robot">Robot</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="Bebas Neue">Bebas Neue</option>
+                            <option value="Dancing Script">Dancing Script</option>
+                            <option value="Arial">Arial</option>
+                            <option value="Times New Roman">Times New Roman</option>
+                            </option>
+                        </select>
+                    </span>
+
+                </p>
+                <div id="themeConfig">
+                    <button onclick="resetFunction()" class="button button-blank">
+                        Reload
+                    </button>
+
+                    <button onclick="saveTheme()" class="button button-blank">
+                        Save
+                    </button>
+                    <button onclick="closecustomizer()" class="button">
+                        Close
+                    </button>
+                </div>
+
+
+
+
+
+                <!-- </div> -->
             </div>
-            <!-- <div id="copyright"> -->
-            <span class="vspace"></span>
-            <span class="copyrights">
-                &copy; 2022
-                <a href="http://mgeek.in" class="">mGeek.in</a>
-            </span>
 
 
-            <!-- </div> -->
         </div>
-
+        <span class="copyrights">
+            &copy; 2022
+            <a href="http://mgeek.in" class="">mGeek.in</a>
+        </span>
 
     </div>
 
+    <div></div>
 </div>

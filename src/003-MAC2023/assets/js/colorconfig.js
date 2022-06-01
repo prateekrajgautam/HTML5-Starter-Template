@@ -16,6 +16,7 @@ function cssVar(name, value) {
 setTimeout(runonload, 400)
 
 function runonload() {
+
     var themeSliders = document.getElementsByClassName("themeslider")
     for (i = 0; i < themeSliders.length; i++) {
         var slider = themeSliders[i]
@@ -46,8 +47,7 @@ function runonload() {
 
 
 
-
-
+    if (window.DEBUG == 1 || window.DEBUG == true) showCustomizer()
 
 
 
@@ -72,7 +72,7 @@ function loadColorConfig(inputConfig = JSON.parse(sessionStorage.getItem("colorC
 
 
 function closecustomizer() {
-    document.getElementById("app").style.gridTemplateAreas = '"app"'
+    document.getElementById("app").style.gridTemplateAreas = '"app app"'
     document.getElementById("customizer").style.display = "none";
     // document.getElementById("customizer").style.gridArea = '"sidebarHidden"'
     // document.getElementById("maincontent").style.gridColumn = "1 / 2"

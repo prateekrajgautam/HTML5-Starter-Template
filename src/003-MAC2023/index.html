@@ -99,16 +99,18 @@
     </div>
 
     <script>
-        const DEBUG = 1;
-        window.DEBUT = DEBUG
-        if (DEBUG == 1 || DEBUT == true) {
+        const DEBUG = 0;
+        window.DEBUG = DEBUG
+        if (DEBUG == 1 || DEBUG == true) {
             // alert("removing preloader")
+            localStorage.clear()
+            sessionStorage.clear()
             var preloader = document.getElementsByClassName('preloader')[0]
             preloader.outerHTML = ""
         }
         // function resetFunction() {
-        //     localStorage.clear()
-        //     sessionStorage.clear()
+        // localStorage.clear()
+        // sessionStorage.clear()
         // }
         // document.getElementById("slidebar").innerHTML = customizer
         async function getHTML(name, target = null, type = 'innerHTML', storage = sessionStorage) {
@@ -141,7 +143,7 @@
                         response = xhr.response
                         // save to local stoage
                         await xhr.DONE
-                        if (window.DEBUG != 1 || DEBUT != true) storage.setItem(name, response)
+                        if (window.DEBUG != 1 || DEBUG != true) storage.setItem(name, response)
 
                         if (target != null) {
                             // alert(target)

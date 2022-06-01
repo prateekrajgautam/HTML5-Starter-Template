@@ -2,8 +2,7 @@
 #app {
     position: relative;
     display: grid;
-    grid-template-columns: min(1fr, 400px) 5fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-areas: "sidebar app";
     color: var(--color-text-light);
     width: 100vw;
