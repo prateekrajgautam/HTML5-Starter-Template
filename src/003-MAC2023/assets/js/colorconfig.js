@@ -74,21 +74,12 @@ function loadColorConfig(inputConfig = JSON.parse(sessionStorage.getItem("colorC
 function closecustomizer() {
     document.getElementById("app").style.gridTemplateAreas = '"app app"'
     document.getElementById("customizer").style.display = "none";
-    // document.getElementById("customizer").style.gridArea = '"sidebarHidden"'
-    // document.getElementById("maincontent").style.gridColumn = "1 / 2"
-    // document.getElementById("showCustomizer").onclick = "showCustomizer"
     saveTheme()
 }
 
 function showCustomizer() {
     document.getElementById("app").style.gridTemplateAreas = '"sidebar app"'
-    // document.getElementById("customizer").style.gridArea = "sidebar"
-    // document.getElementById("maincontent").style.gridArea = "app"
     document.getElementById("customizer").style.display = "inline-grid";
-    // document.getElementById("customizer").style.gridArea = `"sidebar";
-    // "sidebar app"`
-    // // document.getElementById("showCustomizer").onclick = "closecustomizer()"
-    // document.getElementById("maincontent").style.gridArea = "app"
 
 }
 
