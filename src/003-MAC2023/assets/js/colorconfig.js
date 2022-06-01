@@ -7,24 +7,6 @@ function cssVar(name, value) {
     return rs.getPropertyValue(name);
 }
 
-var themeSliders = document.getElementsByClassName("themeslider")
-for (i = 0; i < themeSliders.length; i++) {
-    var slider = themeSliders[i]
-    slider.addEventListener("input", (e) => {
-        cssVar(`--${e.target.id}`, e.target.value)
-        document.getElementById(`${e.target.id}Disp`).innerHTML = e.target.value
-    })
-}
-
-
-var elem = document.getElementById("fontSize")
-elem.oninput = function () {
-    var currentValue = this.value
-    document.getElementById("fontSizeDisp").innerHTML = currentValue
-    cssVar("fontSize", currentValue)
-    document.body.style.fontSize = currentValue * 16 + "px"
-    // changeBodyFont()
-}
 
 
 
@@ -34,6 +16,24 @@ elem.oninput = function () {
 setTimeout(runonload, 400)
 
 function runonload() {
+    var themeSliders = document.getElementsByClassName("themeslider")
+    for (i = 0; i < themeSliders.length; i++) {
+        var slider = themeSliders[i]
+        slider.addEventListener("input", (e) => {
+            cssVar(`--${e.target.id}`, e.target.value)
+            document.getElementById(`${e.target.id}Disp`).innerHTML = e.target.value
+        })
+    }
+
+
+    var elem = document.getElementById("fontSize")
+    elem.oninput = function () {
+        var currentValue = this.value
+        document.getElementById("fontSizeDisp").innerHTML = currentValue
+        cssVar("fontSize", currentValue)
+        document.body.style.fontSize = currentValue * 16 + "px"
+        // changeBodyFont()
+    }
 
 
     var themeSliders = document.getElementsByClassName("themeslider")
