@@ -2,7 +2,7 @@
     display: grid;
     /* grid-template-columns: 1fr 1fr; */
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 5em;
+    grid-gap: 2em;
     /* padding: 5em; */
 
 }
@@ -19,7 +19,7 @@
     padding-inline: 1em;
     margin-block: .2em;
     background-color: hsl(var(--hueAscent), 20%, 90%);
-    max-width: 90vw;
+    max-width: min(90%, 90vw);
 }
 
 .grid-tracks>div>div>span:hover {
@@ -41,7 +41,7 @@
 .sponsorship-card {
     display: inline-grid;
     min-height: max-content;
-    max-width: 90vw;
+    max-width: min(90%, 90vw);
 }
 
 .sponsorship-card h1,

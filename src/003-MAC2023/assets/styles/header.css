@@ -63,6 +63,8 @@ header {
     top: .5em;
     height: 10em;
     width: 10em;
+    filter: drop-shadow(3px 3px 3px black);
+
 }
 
 .menu {

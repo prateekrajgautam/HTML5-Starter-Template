@@ -134,9 +134,9 @@ function darkMode() {
 }
 
 function darkModeDisable() {
-    cssVar("--light", cssVar("lightDefault"))
-    cssVar("--sat", cssVar("satDefault"))
-    cssVar("--darkmode", "light")
+    cssVar("--light", cssVar("--lightDefault"))
+    cssVar("--sat", cssVar("--satDefault"))
+    cssVar("--darkmode", "--light")
 
     localStorage.removeItem("darkmode")
 }
