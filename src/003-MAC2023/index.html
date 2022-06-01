@@ -169,9 +169,11 @@
             var header = await getHTML('includes/header', 'header', 'outerHTML')
             await getHTML('appmaindemo', 'content', 'outerHTML')
             var hero = await getHTML('includes/hero', 'hero', 'outerHTML')
-            var map = await getHTML('includes/map', 'appmain', "append")
             await getHTML('includes/demo', 'demo', 'outerHTML')
+            await getHTML('pages/callforpapers', 'appmain', "append")
+            await getHTML('pages/importantdates', 'appmain', "append")
             await getHTML('pages/sponshorship', 'appmain', "append")
+            var map = await getHTML('includes/map', 'appmain', "append")
         }
         reloadAll()
 

@@ -157,8 +157,8 @@
 }
 
 section {
-    width: 100%;
-    min-height: 100vh;
+    /* width: 100%;
+    min-height: 100vh; */
     padding-block: clamp(2em, 10vh, 10em);
     background-color: hsla(var(--hue), var(--sat), var(--light), var(--alpha));
     color: hsla(var(--hueText), var(--satText), var(--lightText), var(--alphaText));
@@ -178,7 +178,7 @@ section {
 }
 
 .section-small {
-    padding-block: clamp(1em, 5vh, 5em);
+    padding-block: clamp(1em, 5vh, 5rem);
 }
 
 
