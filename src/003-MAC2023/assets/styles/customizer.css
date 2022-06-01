@@ -23,15 +23,14 @@
 #themeselectionfloat {
     display: inline-grid;
     grid-row: 2/3;
-    max-width: 100%;
     background-color: hsl(120, 10%, 10%);
     color: hsl(var(--hueTextLight), 10%, 95%);
     grid-template-columns: 1fr 10fr 1fr;
-    grid-template-rows: repete(auto-fill, minmax(30px, 100px));
+    grid-template-rows: repete(auto-fill, 500px);
     position: sticky;
-    position: -webkit-sticky;
     top: min(60px);
-    overflow-x: auto;
+    max-width: 80vh;
+    overflow-y: auto;
 }
 
 .slidecontainer {

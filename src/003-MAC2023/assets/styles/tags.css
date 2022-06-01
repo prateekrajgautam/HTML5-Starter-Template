@@ -3,7 +3,7 @@
 h1 {
     font-family: var(--font-h1);
     margin-bottom: 1em;
-    font-size: 4rem;
+    font-size: clamp(1.2em, 10vw, 4em);
     font-weight: 400;
     text-transform: capitalize;
 }
@@ -12,7 +12,7 @@ h2 {
 
     font-family: var(--font-h2);
     margin-bottom: 1em;
-    font-size: 2rem;
+    font-size: clamp(1.1em, 10vw, 2em);
 }
 
 h3 {
@@ -59,11 +59,13 @@ a {
 /* TABLE */
 
 table {
-    border-radius: .2em;
+    border-radius: .2rem;
     -webkit-box-shadow: 1px 1px 3px hsla(0, 0%, 60%, 0.87);
     box-shadow: 1px 1px 3px #999;
-    max-width: 100%;
-    margin-block: 1em;
+    /* width: min-content; */
+    max-width: min(80vw 80%);
+    /* margin-block: 1rem; */
+    overflow-x: auto;
 }
 
 thead {
@@ -74,8 +76,8 @@ thead {
 
 tr,
 td {
-    padding-inline: .4em;
-    padding-block: .2em;
+    padding-inline: .4rem;
+    padding-block: .2rem;
 }
 
 tr:nth-child(odd) {

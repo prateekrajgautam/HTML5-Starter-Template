@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=2">
     <meta name="color-scheme" content="light dark">
     <title>Template Tester</title>
     <link rel="stylesheet" href="./assets/styles/sitestyle.css">
@@ -100,8 +100,9 @@
 
     <script>
         const DEBUG = 1;
-        if (DEBUG == 1) {
-            alert("removing preloader")
+        window.DEBUT = DEBUG
+        if (DEBUG == 1 || DEBUT == true) {
+            // alert("removing preloader")
             var preloader = document.getElementsByClassName('preloader')[0]
             preloader.outerHTML = ""
         }
@@ -134,12 +135,14 @@
                 xhr.open(method, URL)
                 await xhr.send()
                 xhr.onload = async function () {
+                    console.log(xhr.status)
                     // alert(`${xhr.onerror}Loaded: ${xhr.status} ${xhr.response} `);
-                    if (xhr.status >= 200) {
+                    if (xhr.status >= 200 && xhr.status < 400) {
                         response = xhr.response
                         // save to local stoage
-                        if (DEBUG != 1 || DEBUG != true) storage.setItem(name, response)
                         await xhr.DONE
+                        if (window.DEBUG != 1 || DEBUT != true) storage.setItem(name, response)
+
                         if (target != null) {
                             // alert(target)
                             // alert(response)
