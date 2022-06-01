@@ -60,18 +60,15 @@ a {
 
 table {
     border-radius: .2rem;
-    -webkit-box-shadow: 1px 1px 3px hsla(0, 0%, 60%, 0.87);
+    -webkit-box-shadow: 1px 1px 3px hsla(var(--hueComp), 20%, 60%, 0.8);
     box-shadow: 1px 1px 3px #999;
-    /* width: min-content; */
-    max-width: min(80vw 80%);
-    /* margin-block: 1rem; */
-    overflow-x: auto;
+
 }
 
 thead {
     font-size: large;
     font-weight: bold;
-    background-color: rgba(1, 1, 1, 0.7);
+    background-color: hsla(var(--hueComp), var(--sat), 5%, .2);
 }
 
 tr,

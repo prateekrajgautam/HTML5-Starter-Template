@@ -60,8 +60,8 @@
 }
 
 .mnnitAddress {
-    width: 80%;
+    width: 100%;
     display: grid;
-    grid-template-columns: repete(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repete(auto-fit, minmax(20em, 1fr));
     grid-gap: 1em;
 }

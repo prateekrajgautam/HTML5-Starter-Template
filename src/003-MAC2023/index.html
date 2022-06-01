@@ -99,7 +99,7 @@
     </div>
 
     <script>
-        const DEBUG = 0;
+        const DEBUG = 1;
         window.DEBUT = DEBUG
         if (DEBUG == 1 || DEBUT == true) {
             // alert("removing preloader")
@@ -170,8 +170,10 @@
             await getHTML('appmaindemo', 'content', 'outerHTML')
             var hero = await getHTML('includes/hero', 'hero', 'outerHTML')
             await getHTML('includes/demo', 'demo', 'outerHTML')
+            await getHTML('pages/tracks', 'appmain', "append")
             await getHTML('pages/callforpapers', 'appmain', "append")
             await getHTML('pages/importantdates', 'appmain', "append")
+            await getHTML('pages/registrationfee', 'appmain', "append")
             await getHTML('pages/sponshorship', 'appmain', "append")
             var map = await getHTML('includes/map', 'appmain', "append")
         }
