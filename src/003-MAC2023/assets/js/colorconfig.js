@@ -97,7 +97,9 @@ function saveTheme() {
         cssVar("--hue"),
         cssVar("--hueAscent"),
         cssVar("--fontSize"),
-        document.getElementById("FontSelect").value
+
+        cssVar("--font-body")
+        // document.getElementById("FontSelect").value
     ]
     sessionStorage.removeItem("colorConfig")
     sessionStorage.setItem("colorConfig", JSON.stringify(colorConfig))
